@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import NavBar from "./modules/NavBar.js";
 import { Router } from "@reach/router";
 import NotFound from "./pages/NotFound.js";
 import Skeleton from "./pages/Skeleton.js";
@@ -47,15 +48,19 @@ class App extends Component {
   render() {
     return (
       <>
-        <Router>
+      <NavBar />
+        {/* <Router> */}
+          
+          {/* you can treat skeleton as the login/out component
           <Skeleton
             path="/"
             handleLogin={this.handleLogin}
             handleLogout={this.handleLogout}
             userId={this.state.userId}
           />
+
           <NotFound default />
-        </Router>
+        </Router> */}
       </>
     );
   }

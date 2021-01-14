@@ -29,14 +29,16 @@ class Skeleton extends Component {
             onFailure={(err) => console.log(err)}
           />
         ) : (
+
           <GoogleLogin
             clientId={GOOGLE_CLIENT_ID}
             buttonText="Login"
             onSuccess={this.props.handleLogin}
             onFailure={(err) => console.log(err)}
           />
+          
         )}
-        <h1>Good luck on your project :)</h1>
+        {/* <h1>Good luck on your project :)</h1>
         <h2> What we provide in this skeleton</h2>
         <ul>
           <li>Google Auth (Skeleton.js & auth.js)</li>
@@ -52,7 +54,7 @@ class Skeleton extends Component {
           <li>Change the Database Name for MongoDB (server.js)</li>
           <li>Add a favicon to your website at the path client/dist/favicon.ico</li>
           <li>Update website title in client/dist/index.html</li>
-        </ul>
+        </ul> */}
       </>
     );
   }
