@@ -48,19 +48,29 @@ class App extends Component {
   render() {
     return (
       <>
-      <NavBar />
-        {/* <Router> */}
-          
-          {/* you can treat skeleton as the login/out component
-          <Skeleton
-            path="/"
-            handleLogin={this.handleLogin}
-            handleLogout={this.handleLogout}
-            userId={this.state.userId}
-          />
+        <NavBar />
+          {/* <Router> */}
+            
+            {/* you can treat skeleton as the login/out component
+            <Skeleton
+              path="/"
+              handleLogin={this.handleLogin}
+              handleLogout={this.handleLogout}
+              userId={this.state.userId}
+            />
 
-          <NotFound default />
-        </Router> */}
+            <NotFound default />
+          </Router> */}
+        <div className="App-container">
+          <Router>
+            {/*<HomePage/>
+            <WhatDo/>
+            <DoStudy/>
+            <StudyRoom/>
+            <Contact/>
+            <Duck/>*/}
+          </Router>
+        </div> 
       </>
     );
   }
