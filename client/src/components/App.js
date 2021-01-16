@@ -4,6 +4,8 @@ import { Router } from "@reach/router";
 import NotFound from "./pages/NotFound.js";
 import Skeleton from "./pages/Skeleton.js";
 import WhatDo from "./pages/WhatDo.js"
+import StudyRoom from "./pages/StudyRoom.js"
+import PlanPage from "./pages/PlanPage.js"
 
 import "../utilities.css";
 
@@ -65,11 +67,12 @@ class App extends Component {
         <div className="App-container">
           <Router>
             <WhatDo path="/about"/>
+            <PlanPage path="/plan"/>
+            <StudyRoom path ="/study"/>
             <NotFound default/>
             {/*<HomePage/>
             <WhatDo/>
             <DoStudy/>
-            <StudyRoom/>
             <Contact/>
             <Duck/>*/}
           </Router>

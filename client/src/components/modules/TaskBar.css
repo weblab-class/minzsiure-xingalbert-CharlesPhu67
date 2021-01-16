@@ -1,0 +1,11 @@
+.TaskBar-container {
+    border: 2px solid #000000;
+}
+
+.TaskBar-task {
+}
+.TaskBar-style {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
