@@ -5,7 +5,9 @@
 .TaskBar-task {
 }
 .TaskBar-style {
-    width: 100%;
+    border-radius: 10px;
+    margin: auto;
+    width: 80%;
     display: flex;
     overflow: hidden;
 }
