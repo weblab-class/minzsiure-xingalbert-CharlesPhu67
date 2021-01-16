@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Task from "./Task.js";
 import { Resizable } from "re-resizable";
+import { DragDropContext } from 'react-beautiful-dnd';
 
 import "../../utilities.css";
 import "./TaskBar.css";
@@ -28,6 +29,7 @@ class TaskBar extends Component {
     constructor(props) {
         super(props);
         this.state= {
+            duration: 60,
             tasks: [TestTask, TestBreak],
         }
     }
@@ -70,10 +72,8 @@ class TaskBar extends Component {
                     >
                         001
                     </Resizable>
-                    <div style={{ ...style, width: '100%', minWidth: '1px' }}>
-                        002
-                    </div>
-                    {/* <Resizable
+                    
+                    <Resizable
                         style={style}
                         defaultSize={{
                         width: '50%',
@@ -84,7 +84,7 @@ class TaskBar extends Component {
                     >
                         001
                     </Resizable>
-                    <div style={{ ...style, width: '100%', minWidth: '1px' }}>
+                    {/* <div style={{ ...style, width: '100%', minWidth: '1px' }}>
                         002
                     </div> */}
                 </div>
