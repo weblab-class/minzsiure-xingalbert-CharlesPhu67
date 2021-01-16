@@ -47,16 +47,16 @@ class NavBar extends Component {
   render() {
     return (
       <nav className="NavBar-container">
-        <div className="NavBar-title u-inlineBlock">StudyRoom</div>
+        <div className="NavBar-title u-inlineBlock"> <Link to = "/" style={{color: 'white', textDecoration: 'none'}} activeStyle={{color: 'white'}}> StudyRoom </Link> </div>
         <div className="NavBar-linkContainer u-inlineBlock">
-          <Link to="/" className="NavBar-link">
+          <Link to="/about" className="NavBar-link">
             what do?
           </Link>
-          <Link to="/" className="NavBar-link">
+          <Link to="/plan" className="NavBar-link">
             do study?
           </Link>
 
-          <Link to="/" className="NavBar-link">
+          <Link to="/contact" className="NavBar-link">
             contact bear?
           </Link>
           
