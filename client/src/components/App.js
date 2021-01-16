@@ -4,7 +4,7 @@ import { Router } from "@reach/router";
 import NotFound from "./pages/NotFound.js";
 import Skeleton from "./pages/Skeleton.js";
 import WhatDo from "./pages/WhatDo.js"
-
+import Contact from "./pages/Contact.js"
 import "../utilities.css";
 
 import { socket } from "../client-socket.js";
@@ -65,6 +65,7 @@ class App extends Component {
         <div className="App-container">
           <Router>
             <WhatDo path="/about"/>
+            <Contact path = "/contact" />
             <NotFound default/>
             {/*<HomePage/>
             <WhatDo/>
