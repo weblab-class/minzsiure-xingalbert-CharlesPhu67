@@ -6,6 +6,9 @@ import Skeleton from "./pages/Skeleton.js";
 import MainPage from "./pages/MainPage.js"
 import DuckPage from "./pages/DuckPage.js"
 import WhatDo from "./pages/WhatDo.js"
+
+import StudyRoom from "./pages/StudyRoom.js"
+import PlanPage from "./pages/PlanPage.js"
 import Contact from "./pages/Contact.js"
 import "../utilities.css";
 
@@ -57,13 +60,14 @@ class App extends Component {
           <Router>
             <MainPage path ="/"/>
             <WhatDo path="/about"/>
+            <PlanPage path="/plan"/>
+            <StudyRoom path ="/study"/>
             <Contact path = "/contact" />
             <NotFound default/>
             <DuckPage path = '/duck'/>
             {/*<MainPage/>
             <WhatDo/>
             <DoStudy/>
-            <StudyRoom/>
             <Contact/>
             <DuckPage/>*/}
           </Router>
