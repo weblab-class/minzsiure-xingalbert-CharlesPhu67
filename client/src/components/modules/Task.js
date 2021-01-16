@@ -45,7 +45,7 @@ class Task extends Component {
                             defaultBackgroundColor,
                             this.props.duration
                         )}
-                        className="Task-style"
+                        className="Task-style u-textCenter"
                     >
                         {this.props.name}
                     </div>
