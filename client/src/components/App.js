@@ -4,6 +4,7 @@ import { Router } from "@reach/router";
 import NotFound from "./pages/NotFound.js";
 import Skeleton from "./pages/Skeleton.js";
 import MainPage from "./pages/MainPage.js"
+import DuckPage from "./pages/DuckPage.js"
 import WhatDo from "./pages/WhatDo.js"
 import Contact from "./pages/Contact.js"
 import "../utilities.css";
@@ -49,35 +50,25 @@ class App extends Component {
 
   render() {
     return (
-      <>
-        <NavBar />
-          {/* <Router> */}
-            
-            {/* you can treat skeleton as the login/out component
-            <Skeleton
-              path="/"
-              handleLogin={this.handleLogin}
-              handleLogout={this.handleLogout}
-              userId={this.state.userId}
-            />
+      
 
-            <NotFound default />
-          </Router> */}
         <div className="App-container">
+          <NavBar />
           <Router>
             <MainPage path ="/"/>
             <WhatDo path="/about"/>
             <Contact path = "/contact" />
             <NotFound default/>
+            <DuckPage path = '/duck'/>
             {/*<MainPage/>
             <WhatDo/>
             <DoStudy/>
             <StudyRoom/>
             <Contact/>
-            <Duck/>*/}
+            <DuckPage/>*/}
           </Router>
         </div> 
-      </>
+      
     );
   }
 }

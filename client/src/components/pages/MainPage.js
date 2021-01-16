@@ -15,7 +15,8 @@ class MainPage extends Component {
 
     render() {
         return (
-            <>
+            <div className = "MainPage">
+                
                 <h1 className="MainPage-header u-textCenter">
                     <span>STUDY with</span>
                     <span>ME</span>
@@ -26,7 +27,8 @@ class MainPage extends Component {
                 </div>
 
                 <div className = "MainPage-Bear"/>
-            </>
+
+            </div>
         )
     }
 }
