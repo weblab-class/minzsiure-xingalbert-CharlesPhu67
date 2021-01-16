@@ -3,6 +3,7 @@ import NavBar from "./modules/NavBar.js";
 import { Router } from "@reach/router";
 import NotFound from "./pages/NotFound.js";
 import Skeleton from "./pages/Skeleton.js";
+import MainPage from "./pages/MainPage.js"
 import WhatDo from "./pages/WhatDo.js"
 import Contact from "./pages/Contact.js"
 import "../utilities.css";
@@ -64,10 +65,11 @@ class App extends Component {
           </Router> */}
         <div className="App-container">
           <Router>
+            <MainPage path ="/"/>
             <WhatDo path="/about"/>
             <Contact path = "/contact" />
             <NotFound default/>
-            {/*<HomePage/>
+            {/*<MainPage/>
             <WhatDo/>
             <DoStudy/>
             <StudyRoom/>
