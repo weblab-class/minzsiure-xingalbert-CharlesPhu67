@@ -56,7 +56,10 @@ class App extends Component {
       
 
         <div className="App-container">
-          <NavBar />
+          <NavBar handleLogin={this.handleLogin}
+          handleLogout={this.handleLogout}
+          userId={this.state.userId}/>
+          
           <Router>
             <MainPage path ="/"/>
             <WhatDo path="/about"/>
