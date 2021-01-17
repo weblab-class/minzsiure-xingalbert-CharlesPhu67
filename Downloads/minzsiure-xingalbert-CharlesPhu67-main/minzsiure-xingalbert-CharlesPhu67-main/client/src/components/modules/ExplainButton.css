@@ -1,0 +1,5 @@
+.ExplainButton-button {
+    font-size: 40px;
+    border-radius: 30px;
+    padding: var(--s) 20px;
+}
