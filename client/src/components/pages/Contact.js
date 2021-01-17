@@ -1,6 +1,6 @@
 import React from 'react';
 import ExplainButton from "../modules/ExplainButton.js";
-import bear from "../modules/bear.png"
+
 
 class Contact extends React.Component {
   
