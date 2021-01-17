@@ -22,9 +22,9 @@ class ExplainButton extends Component {
                 <button className="ExplainButton-button"
                     type="button"
                     value="Coder"
-                    onClick={this.linkToDuck}
+                    onClick={event =>  window.location.href='/duck'}
                 >
-                    Ducky 
+                    Surprise 
                 </button>
 
                 {/* Click me! */}

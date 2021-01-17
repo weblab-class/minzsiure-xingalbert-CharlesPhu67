@@ -5,6 +5,7 @@ import NotFound from "./pages/NotFound.js";
 import Skeleton from "./pages/Skeleton.js";
 import MainPage from "./pages/MainPage.js"
 import DuckPage from "./pages/DuckPage.js"
+import DuckTimer from "./pages/DuckTimer.js"
 import WhatDo from "./pages/WhatDo.js"
 
 import StudyRoom from "./pages/StudyRoom.js"
@@ -68,6 +69,7 @@ class App extends Component {
             <Contact path = "/contact" userId={this.state.userId}/>
             <NotFound default/>
             <DuckPage path = '/duck' userId={this.state.userId}/>
+            <DuckTimer path = '/timer'/>
             {/*<MainPage/>
             <WhatDo/>
             <DoStudy/>
