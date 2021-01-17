@@ -61,13 +61,13 @@ class App extends Component {
           handleLogout={this.handleLogout}
           userId={this.state.userId}/>
           <Router>
-            <MainPage path ="/"/>
+            <MainPage path ="/" userId={this.state.userId}/>
             <WhatDo path="/about"/>
-            <PlanPage path="/plan"/>
-            <StudyRoom path ="/study"/>
-            <Contact path = "/contact" />
+            <PlanPage path="/plan/" userId={this.state.userId}/>
+            <StudyRoom path ="/study" userId={this.state.userId}/>
+            <Contact path = "/contact" userId={this.state.userId}/>
             <NotFound default/>
-            <DuckPage path = '/duck'/>
+            <DuckPage path = '/duck' userId={this.state.userId}/>
             {/*<MainPage/>
             <WhatDo/>
             <DoStudy/>
