@@ -38,7 +38,7 @@ const Timer = () => {
         <button className="button" onClick={reset}>
           Reset
         </button>
-        <button className = "button" onClick = {event =>  window.location.href='/'}>Finish</button>
+        <button className = "button" onClick = {event =>  window.location.href='/duckfinish'}>Finish</button>
       </div>
     </div>
   );
