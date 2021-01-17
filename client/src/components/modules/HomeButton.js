@@ -1,8 +1,10 @@
 import React, { Component} from "react";
 
-import "./ExplainButton.css";
+import "./HomeButton.css";
 
-class ExplainButton extends Component {
+// this button directs users to /plan
+
+class HomeButton extends Component {
     constructor(props) {
         super(props);
     }
@@ -11,20 +13,20 @@ class ExplainButton extends Component {
 
     }
 
-    linkToDuck = (event) => {
+    // linkToLogin = (event) => {
 
-        console.log(`needs to be implemented`)
-    }
+    //     console.log(`needs to be implemented`)
+    // }
 
     render() {
         return (
             <div className="u-flex" >
-                <button className="ExplainButton-button"
+                <button className="HomeButton-button"
                     type="button"
                     value="Coder"
-                    onClick={event =>  window.location.href='/duck'}
+                    onClick={event =>  window.location.href='/'}
                 >
-                    Surprise 
+                    Home
                 </button>
 
                 {/* Click me! */}
@@ -33,4 +35,4 @@ class ExplainButton extends Component {
     }
 }
 
-export default ExplainButton
+export default HomeButton

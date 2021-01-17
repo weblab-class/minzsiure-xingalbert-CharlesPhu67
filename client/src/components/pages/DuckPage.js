@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import MainPageButton from "../modules/MainPageButton.js"
+import TimerButton from "../modules/TimerButton.js"
 
 import "../../utilities.css";
 import "./DuckPage.css";
@@ -22,7 +22,7 @@ class DuckPage extends Component {
                 </h1>
 
                 <div className="DuckPage-Button">
-                    <MainPageButton/>
+                    <TimerButton/>
                 </div>
 
                 <div className = "DuckPage-Duck"/>

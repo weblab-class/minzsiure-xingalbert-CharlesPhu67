@@ -15,7 +15,7 @@ class WhatDo extends Component {
 
     render() {
         return (
-            <>
+            <div className = "WhatDo">
                 <h1 className="WhatDo-header u-textCenter">
                     About Us
                 </h1>
@@ -36,7 +36,7 @@ class WhatDo extends Component {
                 <div className="WhatDo-ExplainButton">
                     <ExplainButton/>
                 </div>
-            </>
+            </div>
         )
     }
 }
