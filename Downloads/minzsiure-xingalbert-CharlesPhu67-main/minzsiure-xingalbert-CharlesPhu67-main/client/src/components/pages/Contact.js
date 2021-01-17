@@ -1,6 +1,6 @@
 import React from 'react';
-import ExplainButton from "../modules/ExplainButton.js"
-
+import "./MainPage.css";
+import "./WhatDo.css";
 
 class Contact extends React.Component {
   
@@ -12,47 +12,52 @@ class Contact extends React.Component {
       message: '',
     }
   }
-
-
-  
     resetForm(){
       this.setState({name: "", email: "", message: ""})
     }
-    
+
     render() {
       return(
-        <div className="App">
-          <form id="contact-form" onSubmit={this.handleSubmit} method="POST">
-            <div className="form-group">
-                <label htmlFor="name">Name</label>
-                <input type="text" className="form-control" id="name" value={this.state.name} onChange={this.onNameChange.bind(this)} />
-            </div>
-            <div className="form-group">
-                <label htmlFor="exampleInputEmail1">Email address</label>
-                <input type="email" className="form-control" id="email" aria-describedby="emailHelp" value={this.state.email} onChange={this.onEmailChange.bind(this)} />
-            </div>
-            <div className="form-group">
-                <label htmlFor="message">Message</label>
-                <textarea className="form-control" rows="5" id="message" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
-            </div>
-            <button type="submit" className="btn btn-primary">Submit</button>
-          </form>
-        </div>
+          <div className = "MainPage">
+            <div className = "MainPage-Bear"/>
+            <h1 className="WhatDo-header u-textCenter">
+              Contact Us
+            </h1>
+            <form id="contact-form" onSubmit={this.handleSubmit} method="POST">
+
+              <div className="Contact-header u-textCenter">
+                  <input  className="form-control" id="name" placeholder = "Name" value={this.state.name} onChange={this.onNameChange} />
+              </div>
+
+              <div className="Contact-header u-textCenter">
+                  <input type="email" className="form-control" placeholder = "Your Email" id="email" value={this.state.email} onChange={this.onEmailChange}/>
+              </div>
+              
+              <div className="Contact-submit u-textCenter ">
+                  <textarea className="form-control" rows="4" id="message" placeholder = "Comments?"value={this.state.message} onChange={this.onMessageChange} />
+              </div>
+
+
+              <div className = "Contact-submit u-textCenter">
+                <input type = "button" class="btn btn-primary" type="submit"/>
+              </div>
+
+            </form>
+          </div>
       );
     }
   
-    onNameChange(event) {
-      this.setState({name: event.target.value})
+    onNameChange = (event) => {this.setState({name: event.target.value})
     }
   
-    onEmailChange(event) {
-      this.setState({email: event.target.value})
+    onEmailChange = (event) => { this.setState({email: event.target.value})
     }
   
-    onMessageChange(event) {
-      this.setState({message: event.target.value})
+    onMessageChange = (event) => {this.setState({message: event.target.value})
     }
   }
-  
 
-export default Contact;
+
+
+export default Contact 
+
