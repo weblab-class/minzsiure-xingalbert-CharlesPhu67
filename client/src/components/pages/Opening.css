@@ -1,7 +1,7 @@
 #Opening{
-    background-color: white; 
+    background-color: black; 
     background-size: 65%;
-    background-image: url('../images/anib.gif');
+    background-image: url('../images/anibearb.gif');
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
     background-position: center; 
@@ -13,7 +13,19 @@
     padding-top: var(--l);
     display: flex;
     justify-content: center;
-    left: 415px;
-    top: 410px;
     position: absolute;
+    top: 85%;
+    left: 46.3%;
+}
+
+.Opening-header {
+    position: absolute;
+    width: 680px;
+    height: 329px;
+    left: 150px;
+    top: 120px;
+    font-size: 120px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+
 }
