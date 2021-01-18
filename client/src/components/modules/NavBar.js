@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import { Link } from "@reach/router";
 import GoogleLogin, { GoogleLogout } from "react-google-login";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { get, post } from "../../utilities";
 import "./NavBar.css";
+import "../pages/MainPage.css";
 
 // This identifies your application to Google's authentication service
-const GOOGLE_CLIENT_ID = "121479668229-t5j82jrbi9oejh7c8avada226s75bopn.apps.googleusercontent.com";
+const GOOGLE_CLIENT_ID = "853392870845-01fp5j18t6rvnfcmg5mp4crvjuot6154.apps.googleusercontent.com";
 
 /**
  * The navigation bar at the top of all pages. Takes no props.
@@ -46,12 +48,19 @@ class NavBar extends Component {
 
   render() {
     return (
+      <>
+      <head>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            
+      </head>
       <nav className="NavBar-container">
-        <div className="NavBar-title u-inlineBlock"> <Link to = "/" style={{color: 'white', textDecoration: 'none'}} activeStyle={{color: 'white'}}> StudyRoom </Link> </div>
+        <div className="NavBar-title u-inlineBlock"> <Link to = "/" style={{color: 'black', textDecoration: 'none'}} activeStyle={{color: 'white'}}> StudyRoom </Link> </div>
+        
         <div className="NavBar-linkContainer u-inlineBlock">
-          <Link to="/about" className="NavBar-link">
-            what do?
-          </Link>
+          <a class="NavBar-link" href="#about">what do?</a>
+
           <Link to="/plan" className="NavBar-link">
             do study?
           </Link>
@@ -76,9 +85,12 @@ class NavBar extends Component {
               onFailure={(err) => console.log(err)}
               className="NavBar-link NavBar-login"
             />
+          
           )}
         </div>
+        
       </nav>
+    </>
     );
   }
 }

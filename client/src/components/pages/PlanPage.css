@@ -1,0 +1,38 @@
+.PlanPage{
+    background-color: #ffcd37; 
+    background-size: 65%;
+    background-image: url('../images/bear.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom right;   
+    height: 100vh;
+}
+  
+
+.PlanPage-header {
+    font-size: 40px;
+    line-height: 100px;
+    top: 10px;
+    position: center;
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+
+.PlanPage-body {
+    margin: var(--m) 10%
+}
+
+
+.PlanPage-Button {
+    padding-top: var(--l);
+    display: flex;
+    justify-content: center;
+    left: 415px;
+    top: 410px;
+    position: absolute;
+}
+
+h1 span {
+    display: block;
+  }

@@ -4,15 +4,19 @@ import { Router } from "@reach/router";
 import NotFound from "./pages/NotFound.js";
 import Skeleton from "./pages/Skeleton.js";
 import MainPage from "./pages/MainPage.js"
+import Opening from "./pages/Opening.js"
 import DuckPage from "./pages/DuckPage.js"
 import DuckTimer from "./pages/DuckTimer.js"
 import DuckFinish from "./pages/DuckFinish.js"
 import WhatDo from "./pages/WhatDo.js"
 
+
 import StudyRoom from "./pages/StudyRoom.js"
 import PlanPage from "./pages/PlanPage.js"
 import Contact from "./pages/Contact.js"
 import "../utilities.css";
+
+
 
 import { socket } from "../client-socket.js";
 
@@ -54,17 +58,28 @@ class App extends Component {
   };
 
   render() {
-    return (
+    
       
 
+    
+      return (
+        
         <div className="App-container">
-          <NavBar 
+          
+            
+            <NavBar 
           handleLogin={this.handleLogin}
           handleLogout={this.handleLogout}
           userId={this.state.userId}/>
+             
+
           <Router>
-            <MainPage path ="/" userId={this.state.userId}/>
-            <WhatDo path="/about"/>
+          {(!this.props.userId) && (
+            <Opening path = '/' userId={this.state.userId}/>
+          )}
+            
+          
+            <MainPage path ="/main" userId={this.state.userId}/>
             <PlanPage path="/plan/" userId={this.state.userId}/>
             <StudyRoom path ="/study" userId={this.state.userId}/>
             <Contact path = "/contact" userId={this.state.userId}/>
@@ -81,6 +96,9 @@ class App extends Component {
         </div> 
       
     );
+          
+    
+    
   }
 }
 
