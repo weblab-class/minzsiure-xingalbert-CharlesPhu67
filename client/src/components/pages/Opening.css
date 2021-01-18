@@ -8,3 +8,12 @@
     height: 100vh;
     font-family: "Ubuntu", sans-serif;
 }
+
+.Opening-Button {
+    padding-top: var(--l);
+    display: flex;
+    justify-content: center;
+    left: 415px;
+    top: 410px;
+    position: absolute;
+}
