@@ -34,10 +34,12 @@ class Contact extends React.Component {
                   <textarea className="form-control" rows="4" id="message" placeholder = "Comments?"value={this.state.message} onChange={this.onMessageChange} />
               </div>
 
-            </form>
-            <div className = "Contact-submit u-textCenter">
+
+              <div className = "Contact-submit u-textCenter">
               <button type="submit" value = "Email" onClick = {this.handleSubmit} >Submit</button>
-            </div>
+              </div>
+
+            </form>
           </div>
       );
     }
@@ -51,9 +53,5 @@ class Contact extends React.Component {
     handleSubmit = (event) => {this.setState({onSubmit: event.target.value})
   }
   }
-
-
-
-
 
 export default Contact
