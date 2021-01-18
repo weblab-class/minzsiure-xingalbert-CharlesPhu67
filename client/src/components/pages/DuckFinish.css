@@ -13,10 +13,11 @@
     width: 680px;
     height: 329px;
     left: 150px;
-    top: 50px;
+    top: 120px;
     font-size: 80px;
     mix-blend-mode: normal;
     color: white;
+    font-family: "Ubuntu", sans-serif;
     text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
 
 }
