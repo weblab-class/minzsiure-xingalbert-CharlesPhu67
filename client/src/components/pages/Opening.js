@@ -1,18 +1,21 @@
 import React, { Component } from "react";
-// import MainPageButton from "../modules/MainPageButton.js"
-// import ExplainButton from "../modules/ExplainButton.js"
-import { Link } from "@reach/router";
 import GoogleLogin, { GoogleLogout } from "react-google-login";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import "../../utilities.css";
 import "./Opening.css";
+import { navigate } from "@reach/router";
+import { post } from "../../utilities.js";
+
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const GOOGLE_CLIENT_ID = "121479668229-t5j82jrbi9oejh7c8avada226s75bopn.apps.googleusercontent.com";
 
+
+
+  
 
 class Opening extends Component {
     constructor(props) {
@@ -31,8 +34,12 @@ class Opening extends Component {
         const token = res.tokenObj.id_token;
         post ('/api/login', { token }).then (
           () => {
-            this.setState({ loggedIn: true})
-          }) 
+            this.setState({ loggedIn: true}, () => { 
+              navigate ('/main') 
+            })
+            
+          })
+           
       };
     
       handleLogout = () => {
@@ -61,7 +68,7 @@ class Opening extends Component {
             <GoogleLogin
               clientId={GOOGLE_CLIENT_ID}
               buttonText="Login"
-              onSuccess={this.handleLogin}
+              onSuccess={this.handleLogin }
               onFailure={(err) => console.log(err)}
               className="Opening-Button"
             />
