@@ -10,6 +10,7 @@ import DuckTimer from "./pages/DuckTimer.js"
 import DuckFinish from "./pages/DuckFinish.js"
 import WhatDo from "./pages/WhatDo.js"
 
+
 import StudyRoom from "./pages/StudyRoom.js"
 import PlanPage from "./pages/PlanPage.js"
 import Contact from "./pages/Contact.js"
@@ -58,33 +59,27 @@ class App extends Component {
 
   render() {
     
-
+      
 
     
       return (
         
-        
         <div className="App-container">
           
-          {this.props.userId && (
             
             <NavBar 
           handleLogin={this.handleLogin}
           handleLogout={this.handleLogout}
           userId={this.state.userId}/>
-            
-        )}
-          
+             
 
           <Router>
-            {!this.props.userId && (
+          {(!this.props.userId) && (
+            <Opening path = '/' userId={this.state.userId}/>
+          )}
             
-            <Opening path = '/'/>
-            
-        )}
           
             <MainPage path ="/main" userId={this.state.userId}/>
-            <WhatDo path="/about"/>
             <PlanPage path="/plan/" userId={this.state.userId}/>
             <StudyRoom path ="/study" userId={this.state.userId}/>
             <Contact path = "/contact" userId={this.state.userId}/>
@@ -101,7 +96,7 @@ class App extends Component {
         </div> 
       
     );
-
+          
     
     
   }
