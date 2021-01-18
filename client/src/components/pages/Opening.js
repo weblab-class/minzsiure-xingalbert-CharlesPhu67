@@ -55,7 +55,11 @@ class Opening extends Component {
     
     render() {
         return (
+
             <div id='Opening'>
+
+                    
+
                    {this.state.loggedIn ? (
             <GoogleLogout
               clientId={GOOGLE_CLIENT_ID}
