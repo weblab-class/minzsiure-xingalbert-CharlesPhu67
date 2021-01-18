@@ -85,9 +85,9 @@ class TaskBar extends Component {
         
         return (
             <>
-                <div>
+                {/* <div>
                     taskbar stuffs here
-                </div>
+                </div> */}
                 <DragDropContext onDragEnd={this.onDragEnd}>
 					<Droppable droppableId="TaskBar" direction="horizontal">
 						{(provided, snapshot) => (
