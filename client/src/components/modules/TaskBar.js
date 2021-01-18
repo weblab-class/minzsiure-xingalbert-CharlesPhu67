@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Task from "./Task.js";
+import TaskChanger from "./TaskChanger.js";
 import { Resizable } from "re-resizable";
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 
@@ -42,6 +43,10 @@ class TaskBar extends Component {
         super(props);
         this.state = {
           tasks: getDefaultTasks(),
+          focus: true, //set to false
+          focusid: "task-1", //set to null
+          numTask: 3,
+          numBreak: 2,
         };
         this.onDragEnd = this.onDragEnd.bind(this);
     }
@@ -67,6 +72,61 @@ class TaskBar extends Component {
         });
       }
     
+    handleFocus = (id) => {
+        console.log("new focus: ".concat(this.state.focusid));
+        this.setState({
+            focus: true,
+            focusid: id,
+        })
+        console.log("new focus: ".concat(this.state.focusid));
+    }
+    newDuration = (newDuration, id) => {
+        let TaskObj=this.findTask(id);
+        TaskObj.duration = newDuration;
+        this.setState((prevstate) => ({
+            tasks: prevstate.tasks,
+        }))
+    }
+    newName = (newName, id) => {
+        let TaskObj=this.findTask(id);
+        TaskObj.name=newName;
+        this.setState((prevstate) => ({
+            tasks: prevstate.tasks,
+        }))
+    }
+    findTask = (id) => {
+        for(let i = 0; i<this.state.tasks.length; i++) {
+            if (this.state.tasks[i].id === id) {
+                return this.state.tasks[i];
+            }
+        }
+        return null;
+    }
+    addTask = () => {
+        let newTask = {
+            id: `task-${this.state.numTask+1}`, 
+            name: `Task ${this.state.numTask+1}`, 
+            type: "task", 
+            duration: 15, 
+        };
+        this.setState((prevstate) => ({
+            tasks: prevstate.tasks.concat(newTask),
+            numTask: prevstate.numTask+1,
+        }))
+    }
+    addBreak = () => {
+        this.state.numBreak++;
+        let newBreak = { 
+            id: `break-${this.state.numBreak+1}`, 
+            name: `Break ${this.state.numBreak+1}`, 
+            type: "break", 
+            duration: 5, };
+        this.setState((prevstate) => ({
+            tasks: prevstate.tasks.concat(newBreak),
+            numBreak: prevstate.numBreak+1,
+        }))
+    }
+    
 
     render() {
 		
@@ -78,31 +138,80 @@ class TaskBar extends Component {
 				name={task.name}
 				type={task.type}
                 duration={task.duration}
+                handleFocus={this.handleFocus}
+                focusid={this.state.focusid}
             />
         ))
         console.log(taskList);
         
+        let totalDuration = 0;
+        for(let i =0; i<this.state.tasks.length; i++) {
+            totalDuration+=this.state.tasks[i].duration;
+        }
+        
+        let TaskChangerObj = <></>;
+        let TaskObj=this.findTask(this.state.focusid);
+        if (this.state.focus) {
+            TaskChangerObj = <TaskChanger 
+                newDuration={this.newDuration}
+                newName={this.newName}
+                focusid={this.state.focusid}
+                defaultName={TaskObj.name}
+                defaultDuration={TaskObj.duration}
+            />
+        } else {
+            TaskChangerObj = <div></div>
+        }
         
         return (
             <>
                 <div>
                     taskbar stuffs here
                 </div>
-                <DragDropContext onDragEnd={this.onDragEnd}>
-					<Droppable droppableId="TaskBar" direction="horizontal">
-						{(provided, snapshot) => (
-							<div
-								ref={provided.innerRef}
-								style={getListStyle(snapshot.isDraggingOver)}
-								className="TaskBar-style"
-								{...provided.droppableProps}
-							>
-								{taskList}
-								{provided.placeholder}
-							</div>
-						)}
-       				</Droppable>
-				</DragDropContext>
+                <div className="TaskBar-container">
+                    <div className="u-flex">
+                        <button className="TaskBar-addTask"
+                            type="button"
+                            value="add Task"
+                            onClick={(event) => 
+                                this.addTask()
+                            }
+                        >
+                            Add Task 
+                        </button>
+                        <button className="TaskBar-addBreak"
+                            type="button"
+                            value="add Task"
+                            onClick={(event) => 
+                                this.addBreak()
+                            }
+                        >
+                            Add Break 
+                        </button>
+                    </div>
+                    <div>
+                        <span className="TaskBar-time">0 min</span>
+                        <span className="TaskBar-end TaskBar-time">{totalDuration} min</span>
+                    </div>
+                    <DragDropContext onDragEnd={this.onDragEnd}>
+                        <Droppable droppableId="TaskBar" direction="horizontal">
+                            {(provided, snapshot) => (
+                                <div
+                                    ref={provided.innerRef}
+                                    style={getListStyle(snapshot.isDraggingOver)}
+                                    className="TaskBar-style"
+                                    {...provided.droppableProps}
+                                >
+                                    {taskList}
+                                    {provided.placeholder}
+                                </div>
+                            )}
+                        </Droppable>
+                    </DragDropContext>
+                    <div>
+                        {TaskChangerObj}
+                    </div>
+                </div>
             </>
         )};
 }

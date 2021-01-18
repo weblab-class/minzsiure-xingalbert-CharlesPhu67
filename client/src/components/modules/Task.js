@@ -13,7 +13,8 @@ const getItemStyle = (isDragging, draggableStyle, defaultBackgroundColor, width)
   
     // change background colour if dragging
 
-    background: isDragging ? "lightgreen" : defaultBackgroundColor,
+    // background: isDragging ? "lightgreen" : defaultBackgroundColor,
+    background: defaultBackgroundColor,
     flexGrow: width,
   
     // styles we need to apply on draggables
@@ -28,10 +29,17 @@ class Task extends Component {
     componentDidMount() {
 
     }
+    handleClick = (event) => {
+        console.log(event);
+        this.props.handleFocus(this.props.id)
+    }
 
     render() {
         let isBreak = this.props.type === "break";
         let defaultBackgroundColor = isBreak ? "#FFF4E9" : "#41CBC3";
+        if (this.props.focusid === this.props.id) {
+            defaultBackgroundColor = "lightgreen";
+        }
         return (
             <Draggable key={this.props.id} draggableId={this.props.id} index={this.props.index}>
                 {(provided, snapshot) => (
@@ -46,8 +54,10 @@ class Task extends Component {
                             this.props.duration
                         )}
                         className="Task-style u-textCenter"
+                        onClick={this.handleClick}
                     >
-                        {this.props.name}
+                        <div>{this.props.name}</div>
+                        <div className="Task-duration">{this.props.duration} minutes</div>
                     </div>
                 )}
             </Draggable>

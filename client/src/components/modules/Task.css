@@ -7,3 +7,7 @@
     /* some basic styles to make the items look a bit nicer */
     border-radius: 10px;
 }
+
+.Task-duration {
+    color: #666
+}
