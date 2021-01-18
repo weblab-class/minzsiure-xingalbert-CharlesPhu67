@@ -1,22 +1,26 @@
 .NavBar-container {
     padding: var(--s) var(--m);
-    background-color: var(--black);
+    /* background-color: var(--black); */
   }
   
   .NavBar-title {
-    color: var(--white);
-    font-size: 20px;
+    color: black;
+    font-size: 30px;
+    font-family: "Ubuntu", sans-serif;
   }
   
   .NavBar-linkContainer {
-    margin-left: var(--l);
+    margin-left: var(--xl);
+    float: right;
+    font-size: 20px;
   }
   
   .NavBar-link,
   .NavBar-link:visited {
-    color: var(--white);
+    color: black;
     opacity: 0.6;
     text-decoration: none;
+    font-family: "Ubuntu", sans-serif;
   }
   
   .NavBar-link:hover {

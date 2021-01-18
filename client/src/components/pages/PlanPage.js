@@ -15,10 +15,10 @@ class PlanPage extends Component {
 
     render() {
         return (
-            <>
-                <div>
-                    Planning stuffs here.
-                </div>
+            <>  
+                <h1 className="PlanPage-header u-textCenter">
+                    Plan
+                </h1>
                 <TaskBar/>
             </>
         )};
