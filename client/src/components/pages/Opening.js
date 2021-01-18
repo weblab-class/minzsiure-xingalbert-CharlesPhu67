@@ -11,7 +11,7 @@ import { post } from "../../utilities.js";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const GOOGLE_CLIENT_ID = "121479668229-t5j82jrbi9oejh7c8avada226s75bopn.apps.googleusercontent.com";
+const GOOGLE_CLIENT_ID = "853392870845-01fp5j18t6rvnfcmg5mp4crvjuot6154.apps.googleusercontent.com";
 
 
 
