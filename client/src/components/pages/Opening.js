@@ -20,6 +20,7 @@ const GOOGLE_CLIENT_ID = "853392870845-01fp5j18t6rvnfcmg5mp4crvjuot6154.apps.goo
 class Opening extends Component {
     constructor(props) {
         super(props);
+        console.log("here")
         this.state = {
             loggedIn: false,
           };
@@ -42,16 +43,20 @@ class Opening extends Component {
            
       };
     
-      handleLogout = () => {
-        console.log("Logged out successfully!");
-        this.setState({ loggedIn: false });
-    
-        // TODO: Tell the backend we logged out
-        post("/api/logout").then(
-          () => {
-            this.setState( {loggedIn: false})
-          })
-      };
+    handleLogout = () => {
+      console.log("Logged out successfully!");
+      this.setState({ loggedIn: false });
+  
+      // TODO: Tell the backend we logged out
+      post("/api/logout").then(
+        () => {
+          this.setState( {loggedIn: false})
+        })
+    };
+
+    handleLoginTest = (res) => {
+      console.log("here");
+    };
     
     render() {
         return (
@@ -72,7 +77,7 @@ class Opening extends Component {
             <GoogleLogin
               clientId={GOOGLE_CLIENT_ID}
               buttonText="Login"
-              onSuccess={this.handleLogin }
+              onSuccess={ this.handleLoginTest } //this.handleLogin
               onFailure={(err) => console.log(err)}
               className="Opening-Button"
             />
