@@ -1,0 +1,28 @@
+.TaskBar-container {
+    border: 1px solid #000000;
+    border-radius: 10px;
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-direction:column;
+    overflow: hidden;
+    background: lightgray;
+    padding: 8px;
+}
+.TaskBar-style {
+    border-radius: 10px;
+    margin: 0;
+    /* width: 100%; */
+    display: flex;
+    overflow: hidden;
+    background: lightgrey;
+    padding: 8px;
+}
+.TaskBar-time {
+    font-size: medium;
+}
+.TaskBar-end {
+    /* text-align:right; */
+    position:absolute;
+    right: 10%;
+}

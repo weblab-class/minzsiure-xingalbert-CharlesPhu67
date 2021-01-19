@@ -1,0 +1,104 @@
+#MainPage{
+    background-color: #ffcd37; 
+    background-size: 65%;
+    background-image: url('../images/bear.png');
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-position: bottom right;   
+    height: 100vh;
+    font-family: "Ubuntu", sans-serif;
+}
+  
+
+.MainPage-header {
+    position: absolute;
+    width: 680px;
+    height: 329px;
+    left: 150px;
+    top: 120px;
+    font-size: 120px;
+    mix-blend-mode: normal;
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+
+}
+
+h3{
+    mix-blend-mode: normal;
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    font-family: "Ubuntu", sans-serif;
+}
+
+
+.MainPage-body {
+    margin: var(--m) 10%
+}
+
+
+.MainPage-Button {
+    padding-top: var(--l);
+    display: flex;
+    justify-content: center;
+    left: 415px;
+    top: 410px;
+    position: absolute;
+}
+
+h1 span {
+    display: block;
+  }
+
+#about{
+  /* background-color: #95ddfc; */
+  background-color: white;
+  padding: 6% 10% 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+
+#ducky{
+    /* background-color: #95ddfc; */
+    background-color:rgb(168,208,254);
+    padding: 6% 10% 0;
+    font-family: "Ubuntu", sans-serif;
+  }
+
+.recent-img{
+    background-size: 80%;
+    background-image: url('../images/studyBear.png');
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */   
+    height: 70vh;
+  }
+  .recent-text{
+    padding-top: 0%;
+    padding-left: 50px;
+    font-family: "Ubuntu", sans-serif;
+  }
+
+  .recent2-img{
+    background-size: 80%;
+    background-image: url('../images/codeDucky.png');
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */   
+    left: 100px;
+    height: 70vh;
+  }
+
+  .MainPage-ExplainButton {
+    padding-top: var(--l);
+    display: flex;
+    justify-content: center;
+    left: 150px;
+    top: 250px;
+    position: absolute;
+    font-family: "Ubuntu", sans-serif;
+}
+
+#footer{
+    background-color: #ffcd37;
+    padding: 6% 10%;
+    text-align: center;
+    font-family: "Ubuntu", sans-serif;
+  }

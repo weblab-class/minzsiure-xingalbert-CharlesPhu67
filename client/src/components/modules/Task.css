@@ -1,0 +1,13 @@
+.Task-container {
+    border: 2px solid #000000;
+}
+
+.Task-style {
+
+    /* some basic styles to make the items look a bit nicer */
+    border-radius: 10px;
+}
+
+.Task-duration {
+    color: #666
+}

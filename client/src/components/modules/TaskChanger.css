@@ -1,0 +1,40 @@
+p {
+    margin-left: 10px;
+}
+
+.TaskChanger-container {
+  margin: 10px;
+}
+
+.TaskChanger-input,
+.TaskChanger-button {
+  font-family: "Open Sans";
+  font-size: 14px;
+  padding: var(--s) var(--m);
+}
+
+.TaskChanger-input {
+  flex-grow: 1;
+  border: var(--darkgrey) 1px solid;
+  border-radius: var(--xs) 0 0 var(--xs);
+  transition: box-shadow 0.1s;
+}
+
+.TaskChanger-input:focus-within {
+  border-color: var(--primary--dim);
+  box-shadow: 0 0 0 var(--xs) rgba(0, 123, 255, 0.25);
+}
+
+.TaskChanger-button {
+  color: var(--primary);
+  border: var(--primary) 1px solid;
+  border-radius: 0 var(--xs) var(--xs) 0;
+  /* background: none; */
+  /* background-color:rgba(0, 123, 255, 0.25); */
+  transition: color 0.1s, background 0.1s;
+}
+
+.TaskChanger-button:hover {
+  color: var(--white);
+  background-color: var(--primary);
+}
