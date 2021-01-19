@@ -21,6 +21,7 @@ class Opening extends Component {
     constructor(props) {
         super(props);
         console.log("here")
+        console.log("here2")
         this.state = {
             loggedIn: false,
           };
