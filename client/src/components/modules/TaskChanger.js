@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import "../../utilities.css";
 import "./TaskChanger.css"
+import "./TaskBar.css"
 
 class TaskChanger extends Component {
     constructor(props) {
@@ -74,7 +75,7 @@ class TaskChanger extends Component {
             <div>
                 {this.props.defaultName}
                 <span>
-                    <button className="TaskChanger-delButton"
+                    <button className="TaskChanger-delButton TaskBar-button"
                         type="button"
                         value="Delete"
                         onClick={this.handleDelete}
@@ -120,23 +121,35 @@ class TaskChanger extends Component {
                 </button>
              </div>
 
-            <div>
-                <button className="TaskChanger-timeButton"
+            <div className="u-flex TaskChanger-bottomRow">
+                <div>
+                    <button className="TaskChanger-timeButton TaskBar-button"
+                        type="button"
+                        value="-1 min"
+                        onClick={(event) => this.incTime(-1)
+                        }
+                    >
+                        -1 min 
+                    </button>
+                    <button className="TaskChanger-timeButton TaskBar-button"
+                        type="button"
+                        value="+1 min"
+                        onClick={(event) => 
+                            this.incTime(1)
+                        }
+                    >
+                        +1 min
+                    </button>
+                </div>
+                
+                <button className="TaskChanger-hideButton TaskBar-button"
                     type="button"
-                    value="-1 min"
-                    onClick={(event) => this.incTime(-1)
-                    }
-                >
-                    -1 min 
-                </button>
-                <button className="TaskChanger-timeButton"
-                    type="button"
-                    value="+1 min"
+                    value="hide"
                     onClick={(event) => 
-                        this.incTime(1)
+                        this.props.onBlur()
                     }
                 >
-                    +1 min
+                    hide
                 </button>
             </div>
              </>
