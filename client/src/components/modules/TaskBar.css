@@ -9,6 +9,12 @@
     background: lightgray;
     padding: 8px;
 }
+.TaskBar-addTask {
+    margin: 0 var(--s) 0 0;
+}
+.TaskBar-addBreak {
+
+}
 .TaskBar-style {
     border-radius: 10px;
     margin: 0;
@@ -20,9 +26,9 @@
 }
 .TaskBar-time {
     font-size: medium;
+    justify-content: space-between;
 }
 .TaskBar-end {
-    /* text-align:right; */
-    position:absolute;
-    right: 10%;
+    text-align: right;
+    justify-content: right;
 }

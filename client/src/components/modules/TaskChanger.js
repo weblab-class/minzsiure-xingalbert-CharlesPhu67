@@ -74,7 +74,7 @@ class TaskChanger extends Component {
             <div>
                 {this.props.defaultName}
                 <span>
-                    <button className="TaskBar-delButton"
+                    <button className="TaskChanger-delButton"
                         type="button"
                         value="Delete"
                         onClick={this.handleDelete}
@@ -121,7 +121,7 @@ class TaskChanger extends Component {
              </div>
 
             <div>
-                <button className="TaskBar-timeButton"
+                <button className="TaskChanger-timeButton"
                     type="button"
                     value="-1 min"
                     onClick={(event) => this.incTime(-1)
@@ -129,7 +129,7 @@ class TaskChanger extends Component {
                 >
                     -1 min 
                 </button>
-                <button className="TaskBar-timeButton"
+                <button className="TaskChanger-timeButton"
                     type="button"
                     value="+1 min"
                     onClick={(event) => 
