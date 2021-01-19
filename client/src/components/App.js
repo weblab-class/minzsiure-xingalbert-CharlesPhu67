@@ -72,15 +72,15 @@ class App extends Component {
           
             
           <Location>
-          {locationProps => (
-            locationProps.location.pathname === '/' ? null: (
-            <NavBar
-              handleLogin={this.handleLogin}
-              handleLogout={this.handleLogout}
-              userId={this.state.userId}
-            />)
-          )}
-        </Location>
+            {locationProps => (
+              locationProps.location.pathname === '/' ? null: (
+              <NavBar
+                handleLogin={this.handleLogin}
+                handleLogout={this.handleLogout}
+                userId={this.state.userId}
+              />)
+            )}
+          </Location>
              
 
           <Router>
