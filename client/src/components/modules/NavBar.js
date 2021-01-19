@@ -69,7 +69,7 @@ class NavBar extends Component {
             contact bear?
           </Link>
           
-          {this.state.loggedIn ? (
+          {/* {this.state.loggedIn ? (
             <GoogleLogout
               clientId={GOOGLE_CLIENT_ID}
               buttonText="Logout"
@@ -86,7 +86,7 @@ class NavBar extends Component {
               className="NavBar-link NavBar-login"
             />
           
-          )}
+          )} */}
         </div>
         
       </nav>
