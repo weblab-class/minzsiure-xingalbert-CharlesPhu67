@@ -1,5 +1,5 @@
 p {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .TaskChanger-container {
@@ -8,6 +8,7 @@ p {
 
 .TaskChanger-delButton {
   margin: 0 var(--s);
+  background-color: lightcoral;
 }
 
 .TaskChanger-input,
@@ -45,4 +46,15 @@ p {
 
 .TaskChanger-timeButton { 
   margin: 0 var(--s) 0 0 ;
+}
+
+.TaskChanger-bottomRow {
+  display: flex;
+  justify-content:space-between;
+}
+
+.TaskChanger-hideButton {
+  background: lightgray;
+  color: gray;
+  border-style: none;
 }
