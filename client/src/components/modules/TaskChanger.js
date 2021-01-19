@@ -62,13 +62,27 @@ class TaskChanger extends Component {
         });
     }
 
+    handleDelete = (event) => {
+        event.preventDefault();
+        this.props.newName && this.props.delTask(this.props.focusid);
+    }
+
     render() {
         
         return (
             <>
-            <p>
+            <div>
                 {this.props.defaultName}
-            </p>
+                <span>
+                    <button className="TaskBar-delButton"
+                        type="button"
+                        value="Delete"
+                        onClick={this.handleDelete}
+                    >
+                        Delete
+                    </button>
+                </span>
+            </div>
             <div className="u-flex TaskChanger-container">
                 <input
                     type="text"

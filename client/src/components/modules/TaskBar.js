@@ -94,6 +94,19 @@ class TaskBar extends Component {
             tasks: prevstate.tasks,
         }))
     }
+    delTask = (id) => {
+        let TaskObj=this.findTask(id);
+        let index = this.state.tasks.indexOf(TaskObj);
+        console.log(index)
+        let nextIndex = index>0?index-1 : 0;
+        console.log(nextIndex);
+        this.state.tasks.splice(index, 1);
+        this.setState((prevstate) => ({
+            tasks: prevstate.tasks,
+            focus: true,
+            focusid: prevstate.tasks[nextIndex].id,
+        }));
+    }
     findTask = (id) => {
         for(let i = 0; i<this.state.tasks.length; i++) {
             if (this.state.tasks[i].id === id) {
@@ -151,10 +164,13 @@ class TaskBar extends Component {
         
         let TaskChangerObj = <></>;
         let TaskObj=this.findTask(this.state.focusid);
+        console.log(this.state.focusid);
+        console.log(TaskObj)
         if (this.state.focus) {
             TaskChangerObj = <TaskChanger 
                 newDuration={this.newDuration}
                 newName={this.newName}
+                delTask={this.delTask}
                 focusid={this.state.focusid}
                 defaultName={TaskObj.name}
                 defaultDuration={TaskObj.duration}
