@@ -181,9 +181,6 @@ class TaskBar extends Component {
         
         return (
             <>
-                <div>
-                    taskbar stuffs here
-                </div>
                 <div className="TaskBar-container">
                     <div className="u-flex">
                         <button className="TaskBar-addTask"
@@ -205,9 +202,9 @@ class TaskBar extends Component {
                             Add Break 
                         </button>
                     </div>
-                    <div>
-                        <span className="TaskBar-time">0 min</span>
-                        <span className="TaskBar-end TaskBar-time">{totalDuration} min</span>
+                    <div className="TaskBar-time u-flex">
+                        <div>0 min</div>
+                        <div className="TaskBar-end">{totalDuration} min</div>
                     </div>
                     <DragDropContext onDragEnd={this.onDragEnd}>
                         <Droppable droppableId="TaskBar" direction="horizontal">

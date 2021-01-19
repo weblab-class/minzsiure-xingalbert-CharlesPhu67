@@ -6,6 +6,10 @@ p {
   margin: 10px;
 }
 
+.TaskChanger-delButton {
+  margin: 0 var(--s);
+}
+
 .TaskChanger-input,
 .TaskChanger-button {
   font-family: "Open Sans";
@@ -37,4 +41,8 @@ p {
 .TaskChanger-button:hover {
   color: var(--white);
   background-color: var(--primary);
+}
+
+.TaskChanger-timeButton { 
+  margin: 0 var(--s) 0 0 ;
 }
