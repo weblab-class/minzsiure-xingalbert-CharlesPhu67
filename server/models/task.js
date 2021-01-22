@@ -7,7 +7,8 @@ const TaskSchema = new mongoose.Schema({
   taskduration : Number, 
   creatorid : String , 
 
-  /*4 types : 		id: "task-1",
+  /*4 types : 		
+  id: "task-1",
 		name: "Task 1",
 		type: "task",
     duration: 15,
@@ -15,12 +16,6 @@ const TaskSchema = new mongoose.Schema({
     
     /*task.find({creatorid: req.userid) .then (res.send(taska))*/
 });
-const PlanSchema = new mongoose.Schema({
-  TaskSchema : Array ,
-  numTasks: Number, 
-  numBreak: Number, 
 
-
-})
 // compile model from schema
 module.exports = mongoose.model("task", TaskSchema);

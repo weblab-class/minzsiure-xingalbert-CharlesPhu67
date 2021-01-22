@@ -59,15 +59,16 @@ class TaskBar extends Component {
 
     componentDidMount() {
         //will need to implement api request
-        get("/api/plan").then((data) => { 
-            let reversedData = data.reverse(); 
-            reversedData.map((data) => { 
-                this.setState({task: this.state.task.concat([storyObj])});
-            });
-        });
-        // save tasks and make post request. 
-        /*retreive number of array element, save focusid and focus:true make schema for it, 
-        make a post request when saving the tasks, send all tasks back */
+        get('/api/plan', {user_id :this.props.userId}).then((plan) => 
+        this.setState({
+            tasks: plan.tasks,
+            numTask : plan.numTask,
+            numBreak : plan.numBreak, 
+            focus: true ,
+            focusid: plan.tasks[0].id ,
+            name: plan.name ,
+         }));
+
 
     }
 
