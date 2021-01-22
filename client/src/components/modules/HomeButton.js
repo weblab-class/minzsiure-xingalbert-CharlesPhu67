@@ -1,7 +1,7 @@
 import React, { Component} from "react";
 
 import "./HomeButton.css";
-
+import { Link } from "@reach/router";
 // this button directs users to /plan
 
 class HomeButton extends Component {
@@ -21,13 +21,15 @@ class HomeButton extends Component {
     render() {
         return (
             <div className="u-flex" >
+                 <Link to ='/main'>
                 <button className="HomeButton-button"
                     type="button"
                     value="Coder"
-                    onClick={event =>  window.location.href='/main'}
+                    // onClick={event =>  window.location.href='/main'}
                 >
                     Home
                 </button>
+                </Link>
             </div>
         )
     }
