@@ -59,7 +59,7 @@ class TaskBar extends Component {
 
     componentDidMount() {
         //will need to implement api request
-        get('/api/plan', {user_id :this.props.userId}).then((plan) => 
+        get('/api/plan', {user_id :this.props.userId, name : "CURRENT_PLAN"}).then((plan) => 
         this.setState({
             tasks: plan.tasks,
             numTask : plan.numTask,
