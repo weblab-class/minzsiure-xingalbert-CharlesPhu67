@@ -23,14 +23,28 @@
     margin: var(--m) 10%
 }
 
-
-.PlanPage-Button {
-    padding-top: var(--l);
+.PlanPage-buttonRow {
     display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    padding-top: 20px;
+
+}
+
+
+.PlanPage-button {
+    /* display: flex;
     justify-content: center;
-    left: 415px;
-    top: 410px;
-    position: absolute;
+    position: absolute; */
+
+    font-size: 30px;
+    border-radius: 30px;
+    padding: var(--s) 20px;
+    background-color: black;
+    color: white;
+    box-shadow: 5px 10px 4px rgba(0, 0, 0, 0.25);
+    width: 150px;
 }
 
 h1 span {

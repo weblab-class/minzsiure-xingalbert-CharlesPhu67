@@ -8,16 +8,22 @@ import "./StudyRoom.css";
 class StudyRoom extends Component {
     constructor(props) {
         super(props);
+        this.data = null;
     }
     
     componentDidMount() {
 
     }
 
+    // this.data stores the state of the TaskBar
+    onChange = (incData) => {
+        this.data = incData;
+    }
+
     render() {
         return (
             <>
-                <TaskBar onPlanPage={false}/>
+                <TaskBar onPlanPage={false} onChange={this.onChange} userId={this.props.userId}/>
                 <div>
                     <StudyTimer/>
                 </div>

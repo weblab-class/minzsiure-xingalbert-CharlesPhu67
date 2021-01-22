@@ -125,6 +125,14 @@ class TaskChanger extends Component {
                 <div>
                     <button className="TaskChanger-timeButton TaskBar-button"
                         type="button"
+                        value="-5 min"
+                        onClick={(event) => this.incTime(-5)
+                        }
+                    >
+                        -5 min 
+                    </button>
+                    <button className="TaskChanger-timeButton TaskBar-button"
+                        type="button"
                         value="-1 min"
                         onClick={(event) => this.incTime(-1)
                         }
@@ -139,6 +147,15 @@ class TaskChanger extends Component {
                         }
                     >
                         +1 min
+                    </button>
+                    <button className="TaskChanger-timeButton TaskBar-button"
+                        type="button"
+                        value="+5 min"
+                        onClick={(event) => 
+                            this.incTime(5)
+                        }
+                    >
+                        +5 min
                     </button>
                 </div>
                 
