@@ -1,0 +1,64 @@
+#TagMusic{
+    background-color: #ffcd37; 
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    height: 100vh;
+    font-family: "Ubuntu", sans-serif;
+}
+  
+
+.TagMusic-header {
+    font-size: 40px;
+    line-height: 100px;
+    top: 10px;
+    position: center;
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    font-family: "Ubuntu", sans-serif;
+    /* font-weight: bold; */
+
+}
+
+h3{
+    mix-blend-mode: normal;
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    font-family: "Ubuntu", sans-serif;
+}
+
+
+.TagMusic-body {
+    margin: var(--m) 10%
+}
+
+
+h1 span {
+    display: block;
+
+    
+  }
+
+h5 span {
+    display: block;
+}
+
+  .TagMusic-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.TagMusic-img1{
+    background-size: 80%;
+    background-image: url('../images/music.png');
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */   
+    height: 70vh;
+    width: 22%;
+  }
+
+  .TagMusic-img2{
+    background-size: 80%;
+    background-image: url('../images/no-music.png');
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */   
+    height: 70vh;
+    width: 20%;
+  }
