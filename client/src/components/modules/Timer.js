@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./Timer.css";
+import { Link } from "@reach/router";
 
 const Timer = () => {
   const [seconds, setSeconds] = useState(0);
@@ -38,7 +39,9 @@ const Timer = () => {
         <button className="button" onClick={reset}>
           Reset
         </button>
-        <button className = "button" onClick = {event =>  window.location.href='/duckfinish'}>Finish</button>
+        <Link to = '/duckfinish'>
+          <button className = "button">Finish</button>
+        </Link>
       </div>
     </div>
   );

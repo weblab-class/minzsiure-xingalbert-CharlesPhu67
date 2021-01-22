@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "@reach/router";
 import GoogleLogin, { GoogleLogout } from "react-google-login";
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import { HashLink as Link } from 'react-router-hash-link';
 
 import { get, post } from "../../utilities";
 import "./NavBar.css";
@@ -59,7 +60,8 @@ class NavBar extends Component {
         <div className="NavBar-title u-inlineBlock"> <Link to = "/main" style={{color: 'black', textDecoration: 'none'}} activeStyle={{color: 'white'}}> StudyRoom </Link> </div>
         
         <div className="NavBar-linkContainer u-inlineBlock">
-          <a class="NavBar-link" href="/main#about">what do?</a>
+          <Link to = '/main#about' className = 'NavBar-link'>what do?</Link>
+          {/* <a class="NavBar-link" href="/main#about">what do?</a> */}
 
           <Link to="/plan" className="NavBar-link">
             do study?
