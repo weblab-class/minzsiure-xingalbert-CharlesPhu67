@@ -3,18 +3,17 @@ import NavBar from "./modules/NavBar.js";
 import { Router, Location } from "@reach/router";
 import NotFound from "./pages/NotFound.js";
 import Skeleton from "./pages/Skeleton.js";
-import MainPage from "./pages/MainPage.js"
-import Opening from "./pages/Opening.js"
-import DuckPage from "./pages/DuckPage.js"
-import DuckTimer from "./pages/DuckTimer.js"
-import DuckFinish from "./pages/DuckFinish.js"
-import WhatDo from "./pages/WhatDo.js"
-import StudyFinish from "./pages/StudyFinish.js"
-
-
-import StudyRoom from "./pages/StudyRoom.js"
-import PlanPage from "./pages/PlanPage.js"
-import Contact from "./pages/Contact.js"
+import MainPage from "./pages/MainPage.js";
+import Opening from "./pages/Opening.js";
+import DuckPage from "./pages/DuckPage.js";
+import DuckTimer from "./pages/DuckTimer.js";
+import DuckFinish from "./pages/DuckFinish.js";
+import StudyFinish from "./pages/StudyFinish.js";
+import TagLearner from "./pages/TagLearner.js";
+import TagMusic from "./pages/TagMusic.js";
+import StudyRoom from "./pages/StudyRoom.js";
+import PlanPage from "./pages/PlanPage.js";
+import Contact from "./pages/Contact.js";
 import "../utilities.css";
 
 
@@ -23,6 +22,7 @@ import "../utilities.css";
 import { socket } from "../client-socket.js";
 
 import { get, post } from "../utilities";
+
 
 
 
@@ -98,6 +98,8 @@ class App extends Component {
             <DuckPage path = '/duck' userId={this.state.userId}/>
             <DuckTimer path = '/timer'/>
             <DuckFinish path = '/duckfinish'/>
+            <TagLearner path = '/taglearner'/>
+            <TagMusic path = '/tagmusic'/>
             {/*<MainPage/>
             <WhatDo/>
             <DoStudy/>

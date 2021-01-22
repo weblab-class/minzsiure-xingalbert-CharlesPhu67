@@ -1,5 +1,5 @@
 import React, { Component} from "react";
-
+import { Link } from "@reach/router";
 import "./TimerButton.css";
 
 // this button directs users to /plan

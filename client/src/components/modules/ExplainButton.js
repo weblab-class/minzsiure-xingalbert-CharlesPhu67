@@ -1,6 +1,7 @@
 import React, { Component} from "react";
 
 import "./ExplainButton.css";
+import { Link } from "@reach/router";
 
 class ExplainButton extends Component {
     constructor(props) {
@@ -19,13 +20,15 @@ class ExplainButton extends Component {
     render() {
         return (
             <div className="u-flex" >
+                <Link to ='/duck'>
                 <button className="ExplainButton-button"
                     type="button"
                     value="Coder"
-                    onClick={event =>  window.location.href='/duck'}
+                    // onClick={event =>  window.location.href='/duck'}
                 >
                     Surprise 
                 </button>
+                </Link>
 
                 {/* Click me! */}
             </div>

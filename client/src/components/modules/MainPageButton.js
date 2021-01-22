@@ -1,5 +1,5 @@
 import React, { Component} from "react";
-
+import { Link } from "@reach/router";
 import "./MainPageButton.css";
 
 // this button directs users to /plan
@@ -21,14 +21,15 @@ class MainPageButton extends Component {
     render() {
         return (
             <div className="u-flex" >
-                <button className="MainPageButton-button"
-                    type="button"
-                    value="Coder"
-                    onClick={event =>  window.location.href='/plan'}
-                >
-                    Go
-                </button>
-
+                <Link to = '/plan'>
+                    <button className="MainPageButton-button"
+                        type="button"
+                        value="Coder"
+                        // onClick={event =>  window.location.href='/plan'}
+                    >
+                        Go
+                    </button>
+                </Link>
                 {/* Click me! */}
             </div>
         )
