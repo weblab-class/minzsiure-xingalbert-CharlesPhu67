@@ -19,7 +19,7 @@ class PlanPage extends Component {
                 <h1 className="PlanPage-header u-textCenter">
                     Plan
                 </h1>
-                <TaskBar/>
+                <TaskBar onPlanPage={true}/>
             </>
         )};
 }

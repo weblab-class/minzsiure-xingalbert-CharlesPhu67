@@ -24,12 +24,10 @@ class HomeButton extends Component {
                 <button className="HomeButton-button"
                     type="button"
                     value="Coder"
-                    onClick={event =>  window.location.href='/'}
+                    onClick={event =>  window.location.href='/main'}
                 >
                     Home
                 </button>
-
-                {/* Click me! */}
             </div>
         )
     }

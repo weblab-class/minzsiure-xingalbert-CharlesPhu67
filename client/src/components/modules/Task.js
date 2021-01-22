@@ -57,7 +57,7 @@ class Task extends Component {
                         onClick={this.handleClick}
                     >
                         <div>{this.props.name}</div>
-                        <div className="Task-duration">{this.props.duration} minutes</div>
+                        <div className="Task-duration">{this.props.duration} min</div>
                     </div>
                 )}
             </Draggable>

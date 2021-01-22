@@ -9,6 +9,7 @@ import DuckPage from "./pages/DuckPage.js"
 import DuckTimer from "./pages/DuckTimer.js"
 import DuckFinish from "./pages/DuckFinish.js"
 import WhatDo from "./pages/WhatDo.js"
+import StudyFinish from "./pages/StudyFinish.js"
 
 
 import StudyRoom from "./pages/StudyRoom.js"
@@ -72,15 +73,15 @@ class App extends Component {
           
             
           <Location>
-          {locationProps => (
-            locationProps.location.pathname === '/' ? null: (
-            <NavBar
-              handleLogin={this.handleLogin}
-              handleLogout={this.handleLogout}
-              userId={this.state.userId}
-            />)
-          )}
-        </Location>
+            {locationProps => (
+              locationProps.location.pathname === '/' ? null: (
+              <NavBar
+                handleLogin={this.handleLogin}
+                handleLogout={this.handleLogout}
+                userId={this.state.userId}
+              />)
+            )}
+          </Location>
              
 
           <Router>
@@ -91,6 +92,7 @@ class App extends Component {
                   
             <PlanPage path="/plan" userId={this.state.userId}/>
             <StudyRoom path ="/study" userId={this.state.userId}/>
+            <StudyFinish path ="/finish" userId={this.state.userId}/>
             <Contact path = "/contact" userId={this.state.userId}/>
             <NotFound default/>
             <DuckPage path = '/duck' userId={this.state.userId}/>

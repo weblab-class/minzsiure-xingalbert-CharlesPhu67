@@ -42,16 +42,16 @@ class Opening extends Component {
             
       };
     
-      handleLogout = () => {
-        console.log("Logged out successfully!");
-        this.setState({ loggedIn: false });
-    
-        // TODO: Tell the backend we logged out
-        post("/api/logout").then(
-          () => {
-            this.setState( {loggedIn: false})
-          })
-      };
+    handleLogout = () => {
+      console.log("Logged out successfully!");
+      this.setState({ loggedIn: false });
+  
+      // TODO: Tell the backend we logged out
+      post("/api/logout").then(
+        () => {
+          this.setState( {loggedIn: false})
+        })
+    };
     
     render() {
         return (

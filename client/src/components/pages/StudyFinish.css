@@ -1,0 +1,49 @@
+.StudyFinish{
+    background-color: #ffcd37; 
+    background-size: 65%;
+    background-image: url('../images/bear.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom right;   
+    height: 100vh;
+}
+
+.StudyFinish-header {
+    position: absolute;
+    width: 680px;
+    height: 329px;
+    left: 150px;
+    top: 120px;
+    font-size: 80px;
+    mix-blend-mode: normal;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.StudyFinish-share {
+    position: absolute;
+    left: 150px;
+    top: 220px;
+    font-size: 40px;
+}
+
+
+.StudyFinish-body {
+    margin: var(--m) 10%
+}
+
+
+.StudyFinish-Button {
+    padding-top: var(--l);
+    display: flex;
+    justify-content: center;
+    left: 415px;
+    top: 420px;
+    position: absolute;
+}
+
+h1 span {
+    display: block;
+  }

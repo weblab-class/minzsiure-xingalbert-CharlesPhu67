@@ -49,8 +49,8 @@ class TaskBar extends Component {
         super(props);
         this.state = {
           tasks: getDefaultTasks(),
-          focus: true, //set to false
-          focusid: "task-1", //set to null
+          focus: this.props.onPlanPage, //set to false
+          focusid: this.props.onPlanPage? "task-1" : null, //set to null
           numTask: 3,
           numBreak: 2,
         };
@@ -94,7 +94,14 @@ class TaskBar extends Component {
             focus: true,
             focusid: id,
         })
-        console.log("new focus: ".concat(this.state.focusid));
+        // console.log("new focus: ".concat(this.state.focusid));
+    }
+    handleBlur = () => {
+        console.log("Blur");
+        this.setState({
+            focus: false,
+            focusid: null,
+        })
     }
     newDuration = (newDuration, id) => {
         let TaskObj=this.findTask(id);
@@ -147,7 +154,7 @@ class TaskBar extends Component {
         this.state.numBreak++;
         let newBreak = { 
             id: `break-${this.state.numBreak+1}`, 
-            name: `Break ${this.state.numBreak+1}`, 
+            name: `Break`, 
             type: "break", 
             duration: 5, };
         this.setState((prevstate) => ({
@@ -190,6 +197,8 @@ class TaskBar extends Component {
                 focusid={this.state.focusid}
                 defaultName={TaskObj.name}
                 defaultDuration={TaskObj.duration}
+                onBlur={this.handleBlur}
+                onPlanPage={this.onPlanPage}
             />
         } else {
             TaskChangerObj = <div></div>
@@ -197,9 +206,9 @@ class TaskBar extends Component {
         
         return (
             <>
-                <div className="TaskBar-container">
-                    <div className="u-flex">
-                        <button className="TaskBar-addTask"
+                <div className="TaskBar-container" onBlur={this.handleBlur} onFocus={this.tempf} tabIndex="100">
+                    <div className="u-flex" >
+                        <button className="TaskBar-addTask TaskBar-button"
                             type="button"
                             value="add Task"
                             onClick={(event) => 
@@ -208,7 +217,7 @@ class TaskBar extends Component {
                         >
                             Add Task 
                         </button>
-                        <button className="TaskBar-addBreak"
+                        <button className="TaskBar-addBreak TaskBar-button"
                             type="button"
                             value="add Task"
                             onClick={(event) => 
