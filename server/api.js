@@ -43,15 +43,15 @@ router.post("/initsocket", (req, res) => {
 // | write your API methods below!|
 // |------------------------------|
 router.get("/plan", (req,res) => { 
-  Plan.find({ user_id: req.query.user_id}).then((plan) => res.send(plan)); 
+  Plan.find({ userId: req.query.userId, name:req.query.name}).then((plan) => res.send(plan)); 
 })
 
 router.post("/plan", (req,res) => { 
   const newPlan  = new Plan ({ 
     tasks : req.body.tasks ,
-    numTasks: req.body.numTasks, 
+    numTask: req.body.numTask, 
     numBreak: req.body.numBreak, 
-    user_id: req.user._id ,
+    userId: req.body.userId ,
     name: req.body.name,
   })
   newPlan.save().then((plan) => res.send(plan));

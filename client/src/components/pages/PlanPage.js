@@ -40,6 +40,7 @@ class PlanPage extends Component {
                                 numTask: this.data.numTask,
                                 numBreak: this.data.numBreak,
                                 name: "temp-name",
+                                userId: this.props.userId,
                             };
                             post("/api/plan", body);
                         }}
@@ -56,6 +57,7 @@ class PlanPage extends Component {
                                     numTask: this.data.numTask,
                                     numBreak: this.data.numBreak,
                                     name: "CURRENT_PLAN",
+                                    userId: this.props.userId,
                                 };
                                 post("/api/plan", body);
                             }}

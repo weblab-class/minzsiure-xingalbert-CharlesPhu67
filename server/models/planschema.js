@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 const PlanSchema = new mongoose.Schema({
     tasks : [Object] ,
-    numTasks: Number, 
+    numTask: Number, 
     numBreak: Number, 
-    user_id: String ,
+    userId: String ,
     name : String, 
   })
 
