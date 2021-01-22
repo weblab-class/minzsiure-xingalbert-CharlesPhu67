@@ -59,6 +59,7 @@ class TaskBar extends Component {
 
     componentDidMount() {
         //will need to implement api request
+        this.returnState();
         get('/api/plan', {user_id :this.props.userId, name : "CURRENT_PLAN"}).then((plans) => {
             console.log("Queried Plans: " + plans.toString());
             if (plans.length > 0) {
@@ -73,8 +74,16 @@ class TaskBar extends Component {
                 });
             }
         });
+    }
+    componentDidUpdate() {
+        this.returnState();
+    }
 
-
+    returnState = () => {
+        // returns state to PlanPage
+        if(this.props.onChange) {
+            this.props.onChange(this.state)
+        }
     }
 
     onDragEnd(result) {
@@ -142,7 +151,7 @@ class TaskBar extends Component {
                 return this.state.tasks[i];
             }
         }
-        return null;
+         return null;
     }
     addTask = () => {
         let newTask = {
@@ -212,7 +221,7 @@ class TaskBar extends Component {
         
         return (
             <>
-                <div className="TaskBar-container" onBlur={this.handleBlur} onFocus={this.tempf} tabIndex="100">
+                <div className="TaskBar-container">
                     <div className="u-flex" >
                         <button className="TaskBar-addTask TaskBar-button"
                             type="button"
@@ -256,6 +265,7 @@ class TaskBar extends Component {
                         {TaskChangerObj}
                     </div>
                 </div>
+
             </>
         )};
 }
