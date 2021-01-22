@@ -42,6 +42,20 @@ router.post("/initsocket", (req, res) => {
 // |------------------------------|
 // | write your API methods below!|
 // |------------------------------|
+router.get("/plan", (req,res) => { 
+  task.find({}).then((task) => res.send(task)); 
+})
+
+router.post("/plan", (req,res) => { 
+  const datas  = new task ({ 
+      creator_id : req.user._id, 
+      taskname : req.body.taskname,
+      taskid : req.body.taskid,
+      tasktype : req.body.tasktype,
+      taskduration : req.body.taskduration 
+  })
+  datas.save().then((plan) => res.send(plan));
+})
 
 // anything else falls to this "not found" case
 router.all("*", (req, res) => {

@@ -36,10 +36,10 @@ class Opening extends Component {
           () => {
             this.setState({ loggedIn: true}, () => { 
               navigate ('/main') 
-            })
+            }) 
             
           })
-           
+            
       };
     
       handleLogout = () => {

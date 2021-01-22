@@ -3,9 +3,15 @@ import Task from "./Task.js";
 import TaskChanger from "./TaskChanger.js";
 import { Resizable } from "re-resizable";
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
-
 import "../../utilities.css";
 import "./TaskBar.css";
+import { Mongoose, Schema } from "mongoose";
+import { get } from "../../utilities.js";
+
+//import models so we can interact with database 
+
+
+
 
 const getDefaultTasks = () => ([
 	{
@@ -53,6 +59,16 @@ class TaskBar extends Component {
 
     componentDidMount() {
         //will need to implement api request
+        get("/api/plan").then((data) => { 
+            let reversedData = data.reverse(); 
+            reversedData.map((data) => { 
+                this.setState({task: this.state.task.concat([storyObj])});
+            });
+        });
+        // save tasks and make post request. 
+        /*retreive number of array element, save focusid and focus:true make schema for it, 
+        make a post request when saving the tasks, send all tasks back */
+
     }
 
     onDragEnd(result) {
