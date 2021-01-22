@@ -15,6 +15,12 @@ const TaskSchema = new mongoose.Schema({
     
     /*task.find({creatorid: req.userid) .then (res.send(taska))*/
 });
+const PlanSchema = new mongoose.Schema({
+  TaskSchema : Array ,
+  numTasks: Number, 
+  numBreak: Number, 
 
+
+})
 // compile model from schema
 module.exports = mongoose.model("task", TaskSchema);

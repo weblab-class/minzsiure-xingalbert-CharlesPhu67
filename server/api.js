@@ -43,7 +43,7 @@ router.post("/initsocket", (req, res) => {
 // | write your API methods below!|
 // |------------------------------|
 router.get("/plan", (req,res) => { 
-  task.find({}).then((task) => res.send(task)); 
+  task.find({creator}).then((task) => res.send(task)); 
 })
 
 router.post("/plan", (req,res) => { 
