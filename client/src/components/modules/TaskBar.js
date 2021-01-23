@@ -64,7 +64,7 @@ class TaskBar extends Component {
             console.log(this.props.userId);
             console.log("Queried Plans: " + plans.toString());
             if (plans.length > 0) {
-                let plan = plans[0];
+                let plan = plans[plans.length-1];
                 this.setState({
                     tasks: plan.tasks,
                     numTask : plan.numTask,
