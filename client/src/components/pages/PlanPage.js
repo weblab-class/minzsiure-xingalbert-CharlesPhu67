@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import TaskBar from "../modules/TaskBar.js";
-import PlanSelector from "../modules/PlanSelector.js";
+// import PlanSelector from "../modules/PlanSelector.js";
 import { post } from "../../utilities.js";
 import { Link } from "@reach/router";
 
@@ -40,7 +40,7 @@ class PlanPage extends Component {
                 <h1 className="PlanPage-header u-textCenter">
                     Plan!
                 </h1>
-                <PlanSelector />
+                {/* <PlanSelector /> */}
 
                 <TaskBar onPlanPage={true} onChange={this.onChange} userId={this.props.userId}/>
 
