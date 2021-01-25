@@ -18,6 +18,16 @@
 .TaskBar-button {
     border-radius: 20px;
   }
+.TaskBar-button:focus {
+    outline: none;
+}
+.TaskBar-planName {
+    font-size: 30px;
+    color: #444;
+    margin: auto;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
 .TaskBar-style {
     border-radius: 10px;
     margin: 0;

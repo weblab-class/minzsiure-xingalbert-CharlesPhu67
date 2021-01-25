@@ -71,15 +71,16 @@ class NavBar extends Component {
             contact bear?
           </Link>
           
-          {/* I commented out the following lines so that the Login button does not render in the NavBar*/}
-          {/* {this.state.loggedIn ? (
-            <GoogleLogout
-              clientId={GOOGLE_CLIENT_ID}
-              buttonText="Logout"
-              onLogoutSuccess={this.handleLogout}
-              onFailure={(err) => console.log(err)}
-              className="NavBar-link NavBar-login"
-            />
+          {/* Login button renders in the NavBar only if logged out*/}
+          {this.state.loggedIn ? (
+            // <GoogleLogout
+            //   clientId={GOOGLE_CLIENT_ID}
+            //   buttonText="Logout"
+            //   onLogoutSuccess={this.handleLogout}
+            //   onFailure={(err) => console.log(err)}
+            //   className="NavBar-link NavBar-login"
+            // />
+            <></>
           ) : (
             <GoogleLogin
               clientId={GOOGLE_CLIENT_ID}
@@ -89,7 +90,7 @@ class NavBar extends Component {
               className="NavBar-link NavBar-login"
             />
           
-          )} */}
+          )}
         </div>
         
       </nav>

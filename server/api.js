@@ -54,7 +54,10 @@ router.post("/plan", (req,res) => {
     userId: req.body.userId ,
     name: req.body.name,
   })
-  newPlan.save().then((plan) => res.send(plan));
+  const query = {name: req.body.name, userId: req.body.userId}
+  Plan.deleteOne(query).then( //ensure only one copy of each plan in database
+    newPlan.save().then((plan) => res.send(plan))  
+  );
 }) 
 
 

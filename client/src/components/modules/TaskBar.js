@@ -25,6 +25,10 @@ const getDefaultTasks = () => ([
 	{ id: "break-2", name: "Break", type: "break", duration: 5, },
 	{ id: "task-3", name: "Task 3", type: "task", duration: 15, }
 ]);
+const getDefaultName = () => {
+    let name = "My Plan";
+    return name;
+}
 
 // a little function to help us with reordering the result
 const reorder = (list, startIndex, endIndex) => {
@@ -49,6 +53,7 @@ class TaskBar extends Component {
         super(props);
         this.state = {
           tasks: getDefaultTasks(),
+          name: getDefaultName(),
           focus: this.props.onPlanPage, //set to false
           focusid: this.props.onPlanPage? "task-1" : null, //set to null
           numTask: 3,
@@ -64,14 +69,14 @@ class TaskBar extends Component {
             console.log(this.props.userId);
             console.log("Queried Plans: " + plans.toString());
             if (plans.length > 0) {
-                let plan = plans[plans.length-1];
+                let plan = plans[0];
                 this.setState({
                     tasks: plan.tasks,
                     numTask : plan.numTask,
                     numBreak : plan.numBreak, 
                     focus: true ,
                     focusid: plan.tasks[0].id ,
-                    name: plan.name ,
+                    name: "Your Plan", //plan.name ,
                 });
             }
         });
@@ -223,6 +228,10 @@ class TaskBar extends Component {
         return (
             <>
                 <div className="TaskBar-container">
+                    <div className="TaskBar-planName">
+                        {this.state.name}
+                    </div>
+                    {this.state.focus && (
                     <div className="u-flex" >
                         <button className="TaskBar-addTask TaskBar-button"
                             type="button"
@@ -242,7 +251,7 @@ class TaskBar extends Component {
                         >
                             Add Break 
                         </button>
-                    </div>
+                    </div>)}
                     <div className="TaskBar-time u-flex">
                         <div>0 min</div>
                         <div className="TaskBar-end">{totalDuration} min</div>

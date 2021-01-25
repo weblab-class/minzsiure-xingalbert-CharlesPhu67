@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import TaskBar from "../modules/TaskBar.js";
+import PlanSelector from "../modules/PlanSelector.js";
 import { post } from "../../utilities.js";
 import { Link } from "@reach/router";
 
@@ -22,12 +23,25 @@ class PlanPage extends Component {
         this.data = incData;
     }
 
+    savePlan = (name) => {
+        const body = {
+            tasks: this.data.tasks,
+            numTask: this.data.numTask,
+            numBreak: this.data.numBreak,
+            name: name,
+            userId: this.props.userId,
+        };
+        post("/api/plan", body);
+    }
+
     render() {
         return (
             <>  
                 <h1 className="PlanPage-header u-textCenter">
-                    Plan
+                    Plan!
                 </h1>
+                <PlanSelector />
+
                 <TaskBar onPlanPage={true} onChange={this.onChange} userId={this.props.userId}/>
 
                 <div className="PlanPage-buttonRow">
@@ -35,14 +49,7 @@ class PlanPage extends Component {
                         type="button"
                         value="Save"
                         onClick={(event) => {
-                            const body = {
-                                tasks: this.data.tasks,
-                                numTask: this.data.numTask,
-                                numBreak: this.data.numBreak,
-                                name: "temp-name",
-                                userId: this.props.userId,
-                            };
-                            post("/api/plan", body);
+                            this.savePlan("temp-name");
                         }}
                     >
                         Save
@@ -52,14 +59,7 @@ class PlanPage extends Component {
                             type="button"
                             value="Start"
                             onClick={(event) => {
-                                const body = {
-                                    tasks: this.data.tasks,
-                                    numTask: this.data.numTask,
-                                    numBreak: this.data.numBreak,
-                                    name: "CURRENT_PLAN",
-                                    userId: this.props.userId,
-                                };
-                                post("/api/plan", body);
+                                this.savePlan("CURRENT_PLAN");
                             }}
                         >
                             Start
