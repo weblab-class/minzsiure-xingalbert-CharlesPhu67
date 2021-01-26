@@ -24,7 +24,7 @@ class StudyRoom extends Component {
         return (
             <>
                 <TaskBar onPlanPage={false} onChange={this.onChange} userId={this.props.userId}/>
-                <div>
+                <div className = "MainPage" >
                     <StudyTimer/>
                 </div>
             </>

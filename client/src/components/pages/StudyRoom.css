@@ -1,0 +1,10 @@
+.MainPage{
+    background-color: #ffcd37; 
+    background-size: 65%;
+    background-image: url('../images/bear.png');
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-position: bottom right;   
+    height: 100vh;
+    font-family: "Ubuntu", sans-serif;
+}
