@@ -71,13 +71,19 @@ class PlanPage extends Component {
 
     savePlan = (name) => {
         console.log("name: "+name)
+        //if user saved without naming plan
+        let planName = (name)? this.state.name : "My Plan";
+        if(name === "CURRENT_PLAN" && !(planName)) {
+            //if user pressed "Start" and name is undefined
+            planName = "My Plan";
+        }
         const body = {
             tasks: this.data.tasks,
             numTask: this.data.numTask,
             numBreak: this.data.numBreak,
             name: name,
             userId: this.props.userId,
-            planName: (name)? this.state.name : "My Plan",
+            planName: planName,
         };
         post("/api/plan", body);
         console.log("User saved: "+ this.props.userId);
@@ -173,7 +179,7 @@ class PlanPage extends Component {
                     <div className="PlanPage-savePrompt u-flex">
                         <input
                             type="text"
-                            placeholder={"Plan Name"}
+                            placeholder={"My Plan"}
                             value={this.state.name}
                             onChange={this.handleChange}
                             className="PlanPage-input"
