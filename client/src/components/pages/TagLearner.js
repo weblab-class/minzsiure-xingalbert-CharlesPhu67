@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import NextButton from "../modules/NextButton.js"
 import "../../utilities.css";
 import "./TagLearner.css";
 
@@ -23,10 +23,18 @@ class TagLearner extends Component {
 
                 <div className="TagLearner-container">
                     <div className = 'TagLearner-img1'></div>
+                    
 
                     <div className = 'TagLearner-img2'></div>
-                </div>
+                    
 
+                    <div className = 'break'></div>
+                    <input type="radio" name="radio"/>
+                    <input type="radio" name="radio"/>
+                    <div className = 'bottom-right'> <NextButton/> </div>
+                </div>
+                
+                
             </div>
         )
     }
