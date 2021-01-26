@@ -55,6 +55,13 @@
 .PlanPage-button:focus {
     outline: none;
 }
+.PlanPage-notLoggedIn {
+    margin-left: 10%;
+    font-size: 20px;
+    border-radius: 30px;
+    padding: var(--s) 20px;
+    color:black;
+}
 
 .PlanPage-savePrompt {
     margin-top: 20px;

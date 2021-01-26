@@ -131,7 +131,7 @@ class PlanPage extends Component {
                     userId={this.props.userId}
                     planName={this.state.name}
                 />
-
+                {this.props.userId ? (
                 <div className="PlanPage-buttonRow">
                     <button className="PlanPage-button PlanPage-save"
                         type="button"
@@ -163,6 +163,12 @@ class PlanPage extends Component {
                         Share
                     </button>
                 </div>
+                )
+                : <div className ="PlanPage-notLoggedIn">
+                    Not logged in!
+                </div>
+                }
+
                 {this.state.savePrompt && (
                     <div className="PlanPage-savePrompt u-flex">
                         <input
