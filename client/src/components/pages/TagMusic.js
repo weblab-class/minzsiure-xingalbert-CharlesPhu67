@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import "../../utilities.css";
 import "./TagMusic.css";
+import StudyButton from "../modules/StudyButton.js"
 
 class TagMusic extends Component {
     constructor(props) {
@@ -25,6 +26,10 @@ class TagMusic extends Component {
                     <div className = 'TagMusic-img1'></div>
 
                     <div className = 'TagMusic-img2'></div>
+                    <div className = 'break'></div>
+                    <input type="radio" name="radio"/>
+                    <input type="radio" name="radio"/>
+                    <div className = 'bottom-right'> <StudyButton/> </div>
                 </div>
 
             </div>

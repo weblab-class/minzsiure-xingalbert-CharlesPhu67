@@ -1,10 +1,10 @@
 import React, { Component} from "react";
 import { Link } from "@reach/router";
-import "./MainPageButton.css";
+import "./NextButton.css";
 
 // this button directs users to /plan
 
-class MainPageButton extends Component {
+class NextButton extends Component {
     constructor(props) {
         super(props);
     }
@@ -21,13 +21,13 @@ class MainPageButton extends Component {
     render() {
         return (
             <div className="u-flex" >
-                <Link to = '/taglearner'>
-                    <button className="MainPageButton-button"
+                <Link to = '/tagmusic'>
+                    <button className="NextButton-button"
                         type="button"
                         value="Coder"
                         // onClick={event =>  window.location.href='/plan'}
                     >
-                        Go
+                        Next→
                     </button>
                 </Link>
                 {/* Click me! */}
@@ -36,4 +36,4 @@ class MainPageButton extends Component {
     }
 }
 
-export default MainPageButton
+export default NextButton
