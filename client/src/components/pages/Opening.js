@@ -39,6 +39,7 @@ class Opening extends Component {
             }) 
             
           })
+        this.props.handeLogin(res);
             
       };
     

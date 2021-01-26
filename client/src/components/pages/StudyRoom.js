@@ -23,7 +23,9 @@ class StudyRoom extends Component {
     render() {
         return (
             <>
-                <TaskBar onPlanPage={false} onChange={this.onChange} userId={this.props.userId}/>
+                {this.props.userId && (
+                    <TaskBar onPlanPage={false} onChange={this.onChange} userId={this.props.userId}/>
+                )}
                 <div className = "MainPage" >
                     <StudyTimer/>
                 </div>

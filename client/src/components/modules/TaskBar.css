@@ -9,6 +9,9 @@
     background: lightgray;
     padding: 8px;
 }
+.TaskBar-buttonRow {
+    margin: auto;
+}
 .TaskBar-addTask {
     margin: 0 var(--s) 0 0;
 }

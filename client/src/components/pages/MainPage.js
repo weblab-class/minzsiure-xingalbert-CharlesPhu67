@@ -63,10 +63,10 @@ class MainPage extends Component {
 
                 <section id='about'>
                     {/* some about info */}
-                    <div class="container-fluid">
-                        <div class="row">
-                        <div class="col-lg-6 recent-img"></div>
-                        <div class="col-lg-6 recent-text">
+                    <div className="container-fluid">
+                        <div className="row">
+                        <div className="col-lg-6 recent-img"></div>
+                        <div className="col-lg-6 recent-text">
                             <h3>What Do</h3>
                             <p>Our mission is to create an enjoyable study environment. Join your customized study room with a cute bear study buddy!</p>
                             <p>
@@ -83,10 +83,10 @@ class MainPage extends Component {
 
                 <section id='ducky'>
                     {/* some ducky info */}
-                    <div class="container-fluid">
-                        <div class="row">
+                    <div className="container-fluid">
+                        <div className="row">
                         
-                        <div class="col-lg-6 recent-text">
+                        <div className="col-lg-6 recent-text">
                             <h3>Hidden Mode</h3>
                             <p>Coders, we got you :) Explain your code to a cute rubber ducky!</p>
                             <p>
@@ -100,7 +100,7 @@ class MainPage extends Component {
                 </div>
             
                         </div>
-                        <div class="col-lg-6 recent2-img"></div>
+                        <div className="col-lg-6 recent2-img"></div>
                         </div>
                     </div>
                 </section>

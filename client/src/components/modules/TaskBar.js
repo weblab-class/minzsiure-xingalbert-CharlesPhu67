@@ -65,6 +65,7 @@ class TaskBar extends Component {
     componentDidMount() {
         //will need to implement api request
         this.returnState();
+        console.log("get api plan for : "+this.props.userId)
         get('/api/plan', {userId :this.props.userId, name : "CURRENT_PLAN"}).then((plans) => {
             console.log(this.props.userId);
             console.log("Queried Plans: " + plans.toString());
@@ -74,9 +75,9 @@ class TaskBar extends Component {
                     tasks: plan.tasks,
                     numTask : plan.numTask,
                     numBreak : plan.numBreak, 
-                    focus: true ,
-                    focusid: plan.tasks[0].id ,
-                    name: "Your Plan", //plan.name ,
+                    focus: this.props.onPlanPage ,
+                    focusid: (this.props.onPlanPage)? plan.tasks[0].id : null,
+                    name: plan.planName, //plan.name ,
                 });
             }
         });
@@ -229,10 +230,10 @@ class TaskBar extends Component {
             <>
                 <div className="TaskBar-container">
                     <div className="TaskBar-planName">
-                        {this.state.name}
+                        {this.props.planName || this.state.name}
                     </div>
                     {this.state.focus && (
-                    <div className="u-flex" >
+                    <div className="u-flex TaskBar-buttonRow" >
                         <button className="TaskBar-addTask TaskBar-button"
                             type="button"
                             value="add Task"

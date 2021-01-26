@@ -87,10 +87,9 @@ class App extends Component {
 
           <Router>
 
-            <Opening path = '/' userId={this.state.userId}/>
+            <Opening path = '/' userId={this.state.userId} handleLogin={this.handleLogin} />
 
             <MainPage path ="/main" userId={this.state.userId}/>
-                  
             <PlanPage path="/plan" userId={this.state.userId}/>
             <StudyRoom path ="/study" userId={this.state.userId}/>
             <StudyFinish path ="/finish" userId={this.state.userId}/>

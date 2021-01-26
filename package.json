@@ -35,9 +35,11 @@
     "react-bootstrap": "^1.4.3",
     "react-confetti": "^6.0.0",
     "react-dom": "^16.14.0",
+    "react-dropdown": "^1.9.1",
     "react-google-login": "^5.2.1",
     "react-router-dom": "^5.2.0",
     "react-router-hash-link": "^2.3.1",
+    "react-select": "^4.0.2",
     "socket.io": "^2.3.0",
     "socket.io-client": "^2.3.1",
     "url-loader": "^4.1.1"

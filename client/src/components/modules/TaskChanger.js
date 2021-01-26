@@ -72,7 +72,7 @@ class TaskChanger extends Component {
         
         return (
             <>
-            <div>
+            <div className ="TaskChanger-container">
                 {this.props.defaultName}
                 <span>
                     <button className="TaskChanger-delButton TaskBar-button"

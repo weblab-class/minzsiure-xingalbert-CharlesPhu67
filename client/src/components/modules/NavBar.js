@@ -34,6 +34,7 @@ class NavBar extends Component {
       () => {
         this.setState({ loggedIn: true})
       }) 
+    this.props.handleLogin(res);
   };
 
   handleLogout = () => {
@@ -45,6 +46,7 @@ class NavBar extends Component {
       () => {
         this.setState( {loggedIn: false})
       })
+    this.props.handleLogout();
   };
 
   render() {
@@ -72,7 +74,8 @@ class NavBar extends Component {
           </Link>
           
           {/* Login button renders in the NavBar only if logged out*/}
-          {this.state.loggedIn ? (
+          {/* {this.state.loggedIn ? ( */}
+          {this.props.userId ? (
             // <GoogleLogout
             //   clientId={GOOGLE_CLIENT_ID}
             //   buttonText="Logout"

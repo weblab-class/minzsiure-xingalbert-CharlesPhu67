@@ -43,16 +43,24 @@ router.post("/initsocket", (req, res) => {
 // | write your API methods below!|
 // |------------------------------|
 router.get("/plan", (req,res) => { 
-  Plan.find({ userId: req.query.userId, name:req.query.name}).then((plan) => res.send(plan)); 
+  let query = {userId: req.query.userId};
+  if(req.query.name) {
+    query.name = req.query.name;
+  }
+  Plan.find(query).then((plan) => res.send(plan)); 
 })
 
 router.post("/plan", (req,res) => { 
+  if(typeof req.body.userId === 'undefined') {
+    return;
+  }
   const newPlan  = new Plan ({ 
     tasks : req.body.tasks ,
     numTask: req.body.numTask, 
     numBreak: req.body.numBreak, 
     userId: req.body.userId ,
     name: req.body.name,
+    planName: req.body.planName,
   })
   const query = {name: req.body.name, userId: req.body.userId}
   Plan.deleteOne(query).then( //ensure only one copy of each plan in database
