@@ -1,5 +1,6 @@
 .Task-container {
     border: 2px solid #000000;
+    
 }
 
 .Task-style {
@@ -10,4 +11,6 @@
 
 .Task-duration {
     color: #666
+
+
 }

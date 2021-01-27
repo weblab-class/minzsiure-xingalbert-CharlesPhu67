@@ -33,7 +33,7 @@ class Task extends Component {
         console.log(event);
         this.props.handleFocus(this.props.id)
     }
-
+  
     render() {
         let isBreak = this.props.type === "break";
         let defaultBackgroundColor = isBreak ? "#FFF4E9" : "#41CBC3";

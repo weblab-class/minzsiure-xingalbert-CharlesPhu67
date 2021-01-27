@@ -1,29 +1,52 @@
 .TaskBar-container {
-    border: 1px solid #000000;
+    border: 1px solid lightgray;
     border-radius: 10px;
     margin: auto;
     width: 80%;
     display: flex;
     flex-direction:column;
     overflow: hidden;
-    background: lightgray;
+    background: white;
     padding: 8px;
+    outline: none;
+    box-shadow: 5px 10px 4px rgba(0, 0, 0, 0.25);
+    background-color: rgb(221, 212, 200);
+
 }
 .TaskBar-buttonRow {
     margin: auto;
 }
 .TaskBar-addTask {
     margin: 0 var(--s) 0 0;
+    background-color: #41cbc3;
+    border-style: none;
+    
 }
-.TaskBar-addBreak {
+
+.TaskBar-addTask:hover {
+
+    background-color: #176e7a;
 
 }
+
+.TaskBar-addBreak {
+    outline-style: none;
+    background-color: #fff4e9;
+    border-style: none;
+}
+
+.TaskBar-addBreak:hover {
+
+    background-color:  #769693;
+
+}
+
 .TaskBar-button {
     border-radius: 20px;
     outline-style: none;
   }
 .TaskBar-button:focus {
-    outline: none;
+    outline-style: none;
 }
 .TaskBar-planName {
     font-size: 30px;
@@ -38,7 +61,7 @@
     /* width: 100%; */
     display: flex;
     overflow: hidden;
-    background: lightgrey;
+    background: rgb(243, 230, 209);
     padding: 8px;
 }
 .TaskBar-time {
