@@ -26,7 +26,11 @@ class StudyFinish extends Component {
                 <h1 className="StudyFinish-header u-textCenter">
                     <span>Congratulations!</span>
                     <span>You did Excellent!</span>
-                    <span className="StudyFinish-share">Share? (tag yourself!)</span>
+                    <span>
+                        <a className="StudyFinish-share"
+                        href = "https://www.facebook.com/StudyBear-102063325238661"
+                        target="_blank">Share? (tag yourself!) </a>
+                    </span>
                 </h1>
 
                 <div className="StudyFinish-Button">
