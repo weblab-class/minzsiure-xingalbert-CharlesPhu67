@@ -1,21 +1,32 @@
+
 p {
   margin-left: 10px;
 }
 
 .TaskChanger-container {
   margin: 10px;
+  
 }
 
 .TaskChanger-delButton {
   margin: 0 var(--s);
   background-color: lightcoral;
+  border-style: none;
+  transition: color 0.1s, background 0.1s;
+
 }
+
+.TaskChanger-delButton:hover {
+  background-color: rgb(134, 43, 43);
+}
+
 
 .TaskChanger-input,
 .TaskChanger-button {
   font-family: "Open Sans";
   font-size: 14px;
   padding: var(--s) var(--m);
+
 }
 
 .TaskChanger-input {
@@ -37,15 +48,29 @@ p {
   /* background: none; */
   /* background-color:rgba(0, 123, 255, 0.25); */
   transition: color 0.1s, background 0.1s;
+  background-color: #41CBC3;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .TaskChanger-button:hover {
   color: var(--white);
-  background-color: var(--primary);
+  background-color:#176e7a;
 }
 
 .TaskChanger-timeButton { 
   margin: 0 var(--s) 0 0 ;
+  border-style: none;
+  background-color: #41CBC3;
+  
+  color: white;
+  /* box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25); */
+  
+}
+
+.TaskChanger-timeButton:hover{
+  background-color:#176e7a;
+  
 }
 
 .TaskChanger-bottomRow {

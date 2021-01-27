@@ -42,7 +42,7 @@ const reorder = (list, startIndex, endIndex) => {
 const grid = 8;
 
 const getListStyle = (isDraggingOver) => ({
-  background: isDraggingOver ? "lightblue" : "lightgrey",
+  background: isDraggingOver ? "lightblue" : "rgb(221, 213, 200)",
   display: "flex",
   padding: grid,
   overflow: "auto"
