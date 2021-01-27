@@ -72,14 +72,16 @@ class PlanPage extends Component {
     // this.data stores the state of the TaskBar
     onChange = (incData) => {
         this.data = incData;
+        
     }
 
     handleLoadPlan = (loadPlan) => {
-        let body = loadPlan;;
-        this.setState({
+        let body = loadPlan;
+        body.name = "CURRENT_PLAN";
+        post("/api/plan", body).then((res) => (this.setState({
             name: body.planName,
-            tasks: body.tasks,
-        });
+            loadedPlan: body,
+        })));
     }
 
     toggleSavePrompt = () => {
@@ -96,7 +98,7 @@ class PlanPage extends Component {
             //if user pressed "Start" and name is undefined
             planName = "My Plan";
         }
-        const body = {
+        const body = loadedPlan ? loadedPlan : {
             tasks: this.data.tasks,
             numTask: this.data.numTask,
             numBreak: this.data.numBreak,
@@ -154,7 +156,7 @@ class PlanPage extends Component {
                     onChange={this.onChange} 
                     userId={this.props.userId}
                     planName={this.state.name}
-                    tasks={this.state.tasks}
+                    loadedPlan={this.state.loadedPlan}
                 />
                 {this.props.userId ? (
                 <div className="PlanPage-buttonRow">

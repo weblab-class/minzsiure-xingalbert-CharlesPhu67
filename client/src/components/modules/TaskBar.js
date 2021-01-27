@@ -69,6 +69,7 @@ class TaskBar extends Component {
         get('/api/plan', {userId :this.props.userId, name : "CURRENT_PLAN"}).then((plans) => {
             console.log(this.props.userId);
             console.log("Queried Plans: " + plans.toString());
+            console.log(plans[0])
             if (plans.length > 0) {
                 let plan = plans[0];
                 this.setState({
@@ -189,7 +190,7 @@ class TaskBar extends Component {
     
 
     render() {
-		let taskArray = (this.props.tasks) ? this.props.tasks : this.state.tasks;
+		let taskArray = (this.props.loadedPlan) ? this.props.loadedPlan.tasks : this.state.tasks;
         let taskList=taskArray.map((task, index) => (
 			<Task 
 				id={task.id}
