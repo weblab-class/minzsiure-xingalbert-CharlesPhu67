@@ -12,6 +12,13 @@ class TagMusic extends Component {
     componentDidMount() {
 
     }
+    check1 =  (event) => {
+        document.getElementById("1").checked = true;
+      }
+
+    check2 =  (event) => {
+        document.getElementById("2").checked = true;
+      }
 
     render() {
         return (
@@ -23,12 +30,12 @@ class TagMusic extends Component {
                 <br></br>
 
                 <div className="TagMusic-container">
-                    <div className = 'TagMusic-img1'></div>
+                    <div className = 'TagMusic-img1' onClick= {this.check1}></div>
 
-                    <div className = 'TagMusic-img2'></div>
+                    <div className = 'TagMusic-img2' onClick= {this.check2}></div>
                     <div className = 'break'></div>
-                    <input type="radio" name="radio"/>
-                    <input type="radio" name="radio"/>
+                    <input type="radio" name="radio" id ='1'/>
+                    <input type="radio" name="radio" id ='2'/>
                     <div className = 'bottom-right'> <StudyButton/> </div>
                 </div>
 
