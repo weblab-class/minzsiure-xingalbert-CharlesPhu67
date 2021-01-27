@@ -41,9 +41,14 @@ class StudyRoom extends Component {
             return;
         }
         let index = 0;
-        while (minutes >= this.data.tasks[index].duration) {
+        while (index < this.data.tasks.length && minutes >= this.data.tasks[index].duration) {
             minutes -= this.data.tasks[index].duration;
             index++;
+        }
+        if (index === this.data.tasks.length) {
+            index --;
+            this.index = index;
+            return `Finished plan`
         }
         this.index = index;
         minutes = this.data.tasks[index].duration - minutes;
