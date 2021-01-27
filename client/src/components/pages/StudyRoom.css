@@ -1,11 +1,12 @@
 .StudyBear{
     background-color: #ffcd37; 
-    background-size: 65%;
+    background-size: 50%;
     background-image: url('../images/bear.png');
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
     background-position: bottom right;   
     height: 100vh;
+    z-index: 100;
  
 
 }
@@ -16,23 +17,3 @@
 
     flex-direction: row ;
 }
-.StudyDucky { 
-    background-size: 80%;
-
-    background-image: url('../images/codeDucky.png');
-    background-repeat: no-repeat;
-    /* background-attachment: fixed; */   
-    height: 13vh;
-    width: 15%;
-    background-color: transparent;
-  }
-  
-  .Snake { 
-    background-size: 80%;
-    background-image: url('../images/snake.png');
-    background-repeat: no-repeat;
-    /* background-attachment: fixed; */   
-    height: 12vh;
-    width: 20%;
-    background-color: transparent;
-  }

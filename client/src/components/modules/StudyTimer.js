@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./StudyTimer.css";
+import { Link } from "@reach/router";
 
 const StudyTimer = (props) => {
   const [seconds, setSeconds] = useState(0);
@@ -50,6 +51,9 @@ const StudyTimer = (props) => {
           Reset
         </button> */}
         <button className = "button" onClick = {event =>  window.location.href='/finish'}>Finish</button>
+        <div className = 'break' />
+        <Link to = '/duck'> <button className = 'StudyDucky'> </button></Link>
+        <Link to = '/tagyourself'><button className = 'Snake'></button></Link>
       </div>
     </div>
   );
