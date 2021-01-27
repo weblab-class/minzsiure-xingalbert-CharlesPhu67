@@ -59,7 +59,7 @@ class NavBar extends Component {
             
       </head>
       <nav className="NavBar-container">
-        <div className="NavBar-title u-inlineBlock"> <Link to = "/main" style={{color: 'black', textDecoration: 'none'}} activeStyle={{color: 'white'}}> StudyRoom </Link> </div>
+        <div className="NavBar-title u-inlineBlock"> <Link to = "/main" style={{color: 'black', textDecoration: 'none'}} activeStyle={{color: 'white'}}> StudyBear </Link> </div>
         
         <div className="NavBar-linkContainer u-inlineBlock">
           <Link to = '/main#about' className = 'NavBar-link'>what do?</Link>
