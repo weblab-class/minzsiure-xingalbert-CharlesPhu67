@@ -74,9 +74,17 @@ class StudyRoom extends Component {
                         setfocusid={this.state.focusid}
                     />
                 )}
-                <div className = "StudyRoom" >
+                <div>
                     <StudyTimer getTimeLeft={this.getTimeLeft} data={this.data}/>
+                
                 </div>
+                        <div className = 'TagLearner-container'>
+                            <a className = 'StudyDucky' href = '/duck'></a>
+                            <a className = 'Snake'></a>
+                            
+                        </div>
+
+                        <div className = "StudyBear"></div>
                 
             </>
         )};
