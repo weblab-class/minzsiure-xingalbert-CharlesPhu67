@@ -175,7 +175,8 @@ class PlanPage extends Component {
                         </button>
                     </Link>
                     <a className="PlanPage-button PlanPage-share"
-                        href = "windows.location.replace(https://www.facebook.com/StudyBear-102063325238661)"
+                        href = "https://www.facebook.com/StudyBear-102063325238661"
+                        target="_blank"
 
                         
                     >
