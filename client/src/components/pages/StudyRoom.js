@@ -66,7 +66,7 @@ class StudyRoom extends Component {
 
     render() {
         return (
-            <>
+            <div className = 'StudyBear'>
                 {this.props.userId && (
                     <TaskBar onPlanPage={false}
                         onChange={this.onChange}
@@ -79,14 +79,13 @@ class StudyRoom extends Component {
                 
                 </div>
                         <div className = 'TagLearner-container'>
-                            <a className = 'StudyDucky' href = '/duck'></a>
-                            <a className = 'Snake'></a>
+                            
                             
                         </div>
 
-                        <div className = "StudyBear"></div>
+                        {/* <div className = "StudyBear"></div> */}
                 
-            </>
+            </div>
         )};
 }
 

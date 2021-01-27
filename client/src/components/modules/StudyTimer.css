@@ -54,3 +54,32 @@
     border: 1px solid #3151ff;
     color: white;
   }
+
+  .StudyDucky { 
+    background-size: 80%;
+    background-image: url('../images/codeDucky.png');
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */   
+    height: 20vh;
+    width: 160px;
+    background-color: transparent;
+    border-style: none;
+    margin: auto;
+  }
+  
+  .Snake { 
+    background-size: 80%;
+    background-image: url('../images/snake.png');
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */   
+    height: 16vh;
+    width: 150px;
+    background-color: transparent;
+    border-style: none;
+    margin: auto;
+  }
+
+   .break {
+    flex-basis: 100%;
+    height: 0;
+  }
