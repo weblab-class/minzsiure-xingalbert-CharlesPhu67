@@ -1,3 +1,8 @@
+/*
+  I modified the react-simple-snake repository. I modified this so that it will only register wins when the snake bits its own tail,
+  and added the logic to handle this.
+*/
+
 import React from 'react'
 import './SnakeGame.css'
 import GameOver from './GameOver.jsx'
