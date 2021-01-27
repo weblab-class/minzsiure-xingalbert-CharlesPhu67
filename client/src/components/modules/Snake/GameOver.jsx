@@ -34,7 +34,7 @@ class GameOver extends Component {
     } else {
       endScore = (
         <div>
-          <div>You failed to Tag Yourself :(( </div>
+          <div>You failed to Tag Yourself in the tail :(( </div>
           <div>You would have scored: {this.props.score}</div> 
           <div>
             {'Local '}high score:{' '} {this.props.highScore}

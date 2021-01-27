@@ -253,7 +253,7 @@ class SnakeGame extends React.Component {
     if (snake[0].Xpos === snake[snake.length-1].Xpos && snake[0].Ypos === snake[snake.length-1].Ypos) {
         if(this.state.score > this.state.highScore) {
           this.state.newHighScore = true;
-          this.state.highScore = this.state.highScore;
+          this.state.highScore = this.state.score;
         }
         this.setState({ isGameOver: true, tagYourself: true,
           newHighScore:this.state.newHighScore, highScore: this.state.highScore})

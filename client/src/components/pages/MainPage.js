@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import MainPageButton from "../modules/MainPageButton.js"
 import ExplainButton from "../modules/ExplainButton.js"
+import { Link } from "@reach/router";
 
 import "../../utilities.css";
 import "./MainPage.css";
@@ -106,6 +107,7 @@ class MainPage extends Component {
                 <footer id="footer">
 
       <p>© Copyright 2021 Penguins n Phriends</p>
+      <Link to="/tagyourself" target="_blank">Tag Yourself!</Link>
 
 
 
