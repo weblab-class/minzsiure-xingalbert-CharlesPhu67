@@ -52,8 +52,8 @@ const StudyTimer = (props) => {
         </button> */}
         <button className = "button" onClick = {event =>  window.location.href='/finish'}>Finish</button>
         <div className = 'break' />
-        <Link to = '/duck'> <button className = 'StudyDucky'> </button></Link>
-        <Link to = '/tagyourself'><button className = 'Snake'></button></Link>
+        <a href="/duck" target="_blank" > <button className = 'StudyDucky'> </button></a>
+        <a href = '/tagyourself' target = '_blank'><button className = 'Snake'></button></a>
       </div>
     </div>
   );
