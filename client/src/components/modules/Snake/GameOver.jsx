@@ -1,3 +1,7 @@
+/*
+  I modified the react-simple-snake repository. I modified this so that it will only register wins when the snake bits its own tail,
+  and added the logic to handle this.
+*/
 
 import React, { Component } from 'react'
 
