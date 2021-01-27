@@ -43,7 +43,7 @@ const StudyTimer = (props) => {
       <div className="timeleft">
         {props.getTimeLeft(minutes, seconds)}
       </div>
-      <div className="row">
+      <div className="rowtimer">
         <button className={`button button-primary button-primary-${isActive ? 'active' : 'inactive'}`} onClick={toggle}>
           {isActive ? 'Pause' : 'Start'}
         </button>
