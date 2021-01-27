@@ -67,14 +67,14 @@ class StudyRoom extends Component {
     render() {
         return (
             <>
-                {this.props.userId && (
-                    <TaskBar onPlanPage={false}
-                        onChange={this.onChange}
-                        userId={this.props.userId}
-                        setfocusid={this.state.focusid}
-                    />
-                )}
                 <div className = "StudyRoom" >
+                    {this.props.userId && (
+                        <TaskBar onPlanPage={false}
+                            onChange={this.onChange}
+                            userId={this.props.userId}
+                            setfocusid={this.state.focusid}
+                        />
+                    )}
                     <StudyTimer getTimeLeft={this.getTimeLeft} data={this.data}/>
                 </div>
                 

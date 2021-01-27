@@ -80,7 +80,7 @@ p {
 }
 
 .TaskChanger-hideButton {
-  background: lightgray;
+  background: rgb(221, 213, 200);
   color: gray;
   border-style: none;
 }
