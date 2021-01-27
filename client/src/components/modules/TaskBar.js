@@ -76,7 +76,7 @@ class TaskBar extends Component {
                     numTask : plan.numTask,
                     numBreak : plan.numBreak, 
                     focus: this.props.onPlanPage ,
-                    focusid: (this.props.onPlanPage)? plan.tasks[0].id : null,
+                    focusid: (this.props.onPlanPage)? plan.tasks[0].id : this.props.setfocusid,
                     name: plan.planName, //plan.name ,
                 });
             }
@@ -89,7 +89,7 @@ class TaskBar extends Component {
     returnState = () => {
         // returns state to PlanPage
         if(this.props.onChange) {
-            this.props.onChange(this.state)
+            return this.props.onChange(this.state)
         }
     }
 
@@ -197,10 +197,10 @@ class TaskBar extends Component {
 				type={task.type}
                 duration={task.duration}
                 handleFocus={this.handleFocus}
-                focusid={this.state.focusid}
+                focusid={(this.props.onPlanPage)?this.state.focusid:this.props.setfocusid}
             />
         ))
-        console.log(taskList);
+        // console.log(taskList);
         
         let totalDuration = 0;
         for(let i =0; i<this.state.tasks.length; i++) {
@@ -209,8 +209,8 @@ class TaskBar extends Component {
         
         let TaskChangerObj = <></>;
         let TaskObj=this.findTask(this.state.focusid);
-        console.log(this.state.focusid);
-        console.log(TaskObj)
+        // console.log(this.state.focusid);
+        // console.log(TaskObj)
         if (this.state.focus) {
             TaskChangerObj = <TaskChanger 
                 newDuration={this.newDuration}

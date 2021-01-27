@@ -12,6 +12,12 @@
     font-size: 6rem;
     padding: 1rem;
   }
+
+  .timeleft {
+    color:gray;
+    margin-top: -40px;
+    margin-bottom: 15px;
+  }
   
   .button {
     padding: .5rem 1.5rem;

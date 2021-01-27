@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import "./StudyTimer.css";
 
-const StudyTimer = () => {
+const StudyTimer = (props) => {
   const [seconds, setSeconds] = useState(0);
+  const [minutes, setMinutes] = useState(0);
   const [isActive, setIsActive] = useState(false);
 
   function toggle() {
@@ -11,6 +12,7 @@ const StudyTimer = () => {
 
   function reset() {
     setSeconds(0);
+    setMinutes(0);
     setIsActive(false);
   }
 
@@ -18,7 +20,13 @@ const StudyTimer = () => {
     let interval = null;
     if (isActive) {
       interval = setInterval(() => {
-        setSeconds(seconds => seconds + 1);
+        if(seconds+1 === 60) {
+          setSeconds(seconds=> 0);
+          setMinutes(minutes => minutes+1)
+        }
+        else {
+          setSeconds(seconds => seconds + 1);
+        }
       }, 1000);
     } else if (!isActive && seconds !== 0) {
       clearInterval(interval);
@@ -29,7 +37,10 @@ const StudyTimer = () => {
   return (
     <div className="app">
       <div className="time">
-        {seconds}s
+        {minutes}m  {seconds}s
+      </div>
+      <div className="timeleft">
+        {props.getTimeLeft(minutes, seconds)}
       </div>
       <div className="row">
         <button className={`button button-primary button-primary-${isActive ? 'active' : 'inactive'}`} onClick={toggle}>
