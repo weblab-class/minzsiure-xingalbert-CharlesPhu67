@@ -32,6 +32,7 @@ class PlanPage extends Component {
             name: undefined,
             options: [],
             plans: null,
+            tasks: undefined,
         }
     }
     
@@ -57,7 +58,7 @@ class PlanPage extends Component {
                 }
             }
             if(found_curr_plan) {
-                delete plans[curr_plan];
+                plans.splice(curr_plan, 1);
             }
             let planNames = plans.map((plan) => ({
                 value: plan.name, 
@@ -74,9 +75,11 @@ class PlanPage extends Component {
     }
 
     handleLoadPlan = (loadPlan) => {
-        let body = loadPlan;
-        body.name = "CURRENT_PLAN";
-        post("/api/plan", body).then((res) => (this.forceUpdate()));
+        let body = loadPlan;;
+        this.setState({
+            name: body.planName,
+            tasks: body.tasks,
+        });
     }
 
     toggleSavePrompt = () => {
@@ -151,6 +154,7 @@ class PlanPage extends Component {
                     onChange={this.onChange} 
                     userId={this.props.userId}
                     planName={this.state.name}
+                    tasks={this.state.tasks}
                 />
                 {this.props.userId ? (
                 <div className="PlanPage-buttonRow">

@@ -40,12 +40,14 @@ class PlanSelector extends Component {
         this.setState({ selectedOption });
         console.log(`Option selected:`, selectedOption);
         let newPlan = null;
+        console.log(this.props.plans);
         for (let i = 0; i<this.props.plans.length; i++) {
-            if(this.props.plans[i].name === selectedOption) {
+            if(this.props.plans[i].planName === selectedOption.label) {
                 newPlan = this.props.plans[i];
                 break;
             }
         }
+        console.log(newPlan);
         this.props.handleLoadPlan(newPlan);
     };
 

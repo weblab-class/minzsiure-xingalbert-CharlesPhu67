@@ -82,6 +82,8 @@ class TaskBar extends Component {
             }
         });
     }
+
+
     componentDidUpdate() {
         this.returnState();
     }
@@ -187,8 +189,8 @@ class TaskBar extends Component {
     
 
     render() {
-		
-        let taskList=this.state.tasks.map((task, index) => (
+		let taskArray = (this.props.tasks) ? this.props.tasks : this.state.tasks;
+        let taskList=taskArray.map((task, index) => (
 			<Task 
 				id={task.id}
 				index={index}
