@@ -71,10 +71,8 @@ class MainPage extends Component {
                             <p>Our mission is to create an enjoyable study environment. Join your customized study room with a cute bear study buddy!</p>
                             <p>
                             Over quarantine or even during normal times, we feel the need to work alone sometimes to keep ourselves focused.
-                             Here, we provide a website <i>with a cute bear</i> to give you some company. When you make progress on your plan, 
-                             you will earn honey to make your bear happier and cuter. 
-                             If you are distracted from entertainments such as YouTube - uh oh - the bear will be sad and your progress may be lost. 
-                            Of course, the bear will remind you to take a break and drink some water as it deeply cares about your health.
+                             Here, we provide a website <i>with a cute bear</i> to give you some company. We also have multiple eastern eggs hidden, so go have fun exploring them!
+                             
                             </p>
                         </div>
                         </div>
