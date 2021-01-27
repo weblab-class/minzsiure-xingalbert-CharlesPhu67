@@ -94,6 +94,10 @@
     box-shadow: 0 0 0 var(--xs) rgba(0, 123, 255, 0.25);
 }
 
+.PlanPage-share {
+    text-align: center;
+}
+
 h1 span {
     display: block;
   }
