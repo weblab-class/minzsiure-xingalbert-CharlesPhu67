@@ -11,8 +11,18 @@ class TagLearner extends Component {
     componentDidMount() {
 
     }
+    
+    check1 =  (event) => {
+            document.getElementById("1").checked = true;
+          }
+
+    check2 =  (event) => {
+            document.getElementById("2").checked = true;
+          }
 
     render() {
+        
+    
         return (
             <div className = "TagLearner">
                 <h1 className="TagLearner-header u-textCenter">
@@ -22,15 +32,17 @@ class TagLearner extends Component {
                 <br></br>
 
                 <div className="TagLearner-container">
-                    <div className = 'TagLearner-img1'></div>
+                    <button className = 'TagLearner-img1' onClick= {this.check1}></button>
                     
 
-                    <div className = 'TagLearner-img2'></div>
+                    <button className = 'TagLearner-img2' onClick= {this.check2}></button>
                     
 
                     <div className = 'break'></div>
-                    <input type="radio" name="radio"/>
-                    <input type="radio" name="radio"/>
+
+                    <input type="radio" name="radio" id ='1'/>
+                    <input type="radio" name="radio" id ='2'/>
+                    
                     <div className = 'bottom-right'> <NextButton/> </div>
                 </div>
                 

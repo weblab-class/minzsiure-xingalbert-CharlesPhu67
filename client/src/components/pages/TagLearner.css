@@ -53,6 +53,7 @@ h5 span {
     /* background-attachment: fixed; */   
     height: 45vh;
     width: 22%;
+    background-color: transparent;
   }
 
 
@@ -63,6 +64,7 @@ h5 span {
     /* background-attachment: fixed; */   
     height: 45vh;
     width: 20%;
+    background-color: transparent;
   }
 
   .TagLearner-button {
