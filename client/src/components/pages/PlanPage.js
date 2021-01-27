@@ -4,11 +4,25 @@ import PlanSelector from "../modules/PlanSelector.js";
 import { post } from "../../utilities.js";
 import { Link } from "@reach/router";
 import { get } from "../../utilities.js";
-
+import "./TagLearner.css";
 
 import "../../utilities.css";
 import "./PlanPage.css";
-
+function moving () { 
+    var elemt = document.getElementById("Ducky-img"); 
+    var pos = 0 
+    var id = setInterval(frame, 10)
+    function frame () { 
+        if (pos == 350) { 
+            clearInterval(id); 
+        }
+        else { 
+            pos++;
+            elem.style.top = pos + "px" ; 
+            element.style.left = pos + 'px';
+        }
+    }
+}
 class PlanPage extends Component {
     constructor(props) {
         super(props);
@@ -24,6 +38,8 @@ class PlanPage extends Component {
     componentDidMount() {
         
     }
+
+
 
     getUserPlans = () => {
         get('/api/plan', {userId :this.props.userId}).then((plans) => {
@@ -114,7 +130,6 @@ class PlanPage extends Component {
             savePrompt: !this.state.savePrompt,
         });
     };
-
     render() {
         return (
             <>  
@@ -159,15 +174,13 @@ class PlanPage extends Component {
                             Start
                         </button>
                     </Link>
-                    <button className="PlanPage-button PlanPage-share"
-                        type="button"
-                        value="Share"
-                        onClick={(event) => 
-                            doSomething()
-                        }
+                    <a className="PlanPage-button PlanPage-share"
+                        href = "windows.location.replace(https://www.facebook.com/StudyBear-102063325238661)"
+
+                        
                     >
                         Share
-                    </button>
+                    </a>
                 </div>
                 )
                 : <div className ="PlanPage-notLoggedIn">

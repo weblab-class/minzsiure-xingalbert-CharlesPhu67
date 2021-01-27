@@ -44,6 +44,7 @@ h5 span {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    
 }
 
 .TagLearner-img1{
@@ -54,6 +55,7 @@ h5 span {
     height: 45vh;
     width: 22%;
     background-color: transparent;
+    border-style : none;
   }
 
 
@@ -65,7 +67,11 @@ h5 span {
     height: 45vh;
     width: 20%;
     background-color: transparent;
+    border-style : none;
+
   }
+
+
 
   .TagLearner-button {
     /* display: flex;

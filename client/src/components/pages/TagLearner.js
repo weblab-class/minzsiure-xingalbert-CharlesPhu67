@@ -7,7 +7,7 @@ class TagLearner extends Component {
     constructor(props) {
         super(props);
     }
-    
+
     componentDidMount() {
 
     }
