@@ -44,6 +44,7 @@
 .TaskBar-button {
     border-radius: 20px;
     outline-style: none;
+    transition: color 0.1s, background 0.1s;
   }
 .TaskBar-button:focus {
     outline-style: none;
