@@ -1,0 +1,41 @@
+/*
+  I modified the react-simple-snake repository. I modified this so that it will only register wins when the snake bits its own tail,
+  and added the logic to handle this.
+*/
+
+#GameBoard {
+    position: relative;
+	margin: auto;
+    border-style: solid;
+    background-color: #fff4e9;
+}
+
+#GameBoard .Block {
+	position: absolute;
+}
+
+#GameBoard #GameOver {
+	text-align: center;
+	height: 100%;
+	flex-direction: column;
+	display: flex;
+	justify-content: space-around;
+}
+
+#GameBoard #Score {
+	position: relative;
+	top: 105%;
+	text-align: center;
+	font-weight: bold;
+}
+
+#GameBoard #GameOverText {
+	color: #ca0000;
+	font-weight: bold;
+	text-decoration-line: underline;
+}
+
+#GameBoard #PressSpaceText {
+	color: #2e7ecb;
+	font-weight: bold;
+}

@@ -14,6 +14,7 @@ import TagMusic from "./pages/TagMusic.js";
 import StudyRoom from "./pages/StudyRoom.js";
 import PlanPage from "./pages/PlanPage.js";
 import Contact from "./pages/Contact.js";
+import TagYourself from "./pages/TagYourself.js";
 import "../utilities.css";
 
 
@@ -100,6 +101,7 @@ class App extends Component {
             <DuckFinish path = '/duckfinish'/>
             <TagLearner path = '/taglearner'/>
             <TagMusic path = '/tagmusic'/>
+            <TagYourself path='/tagyourself'/>
             {/*<MainPage/>
             <WhatDo/>
             <DoStudy/>
