@@ -33,6 +33,7 @@ class PlanPage extends Component {
             options: [],
             plans: null,
             tasks: undefined,
+            loadedPlan: null,
         }
     }
     
@@ -98,7 +99,7 @@ class PlanPage extends Component {
             //if user pressed "Start" and name is undefined
             planName = "My Plan";
         }
-        const body = loadedPlan ? loadedPlan : {
+        const body = this.state.loadedPlan ? this.state.loadedPlan : {
             tasks: this.data.tasks,
             numTask: this.data.numTask,
             numBreak: this.data.numBreak,
